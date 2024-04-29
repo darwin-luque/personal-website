@@ -2,7 +2,9 @@ import '@/styles/globals.css';
 
 import { Inter } from 'next/font/google';
 
+import { ThemeProvider } from '@/providers/theme';
 import { TRPCReactProvider } from '@/trpc/react';
+import { Navbar } from '@/components/navbar';
 import { cn } from '@/lib/utils';
 
 const inter = Inter({
@@ -29,7 +31,17 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TRPCReactProvider>
+            <Navbar />
+            {children}
+          </TRPCReactProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
