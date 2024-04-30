@@ -44,7 +44,7 @@ const portfolio: { title: string; href: string; description: string }[] = [
 export const Navbar: FC = () => {
   return (
     <div className="grid h-16 max-h-max w-screen grid-cols-12 items-center px-4">
-      <div className="col-span-4 flex items-center space-x-4">
+      <div className="col-span-4 flex items-center space-x-4 px-4">
         <Cpu className="h-6 w-6" />
         <p className="text-lg font-medium">Darwin Luque</p>
       </div>
