@@ -27,7 +27,6 @@ export const ContactMeInput: FC = () => {
   const router = useRouter();
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     router.push("/contact-me?email=" + values.email);
   }
 
@@ -47,7 +46,7 @@ export const ContactMeInput: FC = () => {
               </FormLabel>
               <FormControl className="p-0 m-0">
                 <Input
-                  className="h-full m-0 py-0 border-none"
+                  className="h-full m-0 py-0 pl-2 border-none"
                   placeholder="darwin.luque.98@gmail.com"
                   {...field}
                 />

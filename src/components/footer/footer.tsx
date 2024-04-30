@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="bg-muted-foreground py-6 text-background">
+    <footer className="border-t bg-card py-6 text-card-foreground shadow-sm">
       <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row md:px-6">
         <div className="mb-4 text-center md:mb-0 md:text-left">
           <p className="text-sm">
@@ -12,7 +12,7 @@ export const Footer = () => {
         </div>
         <div className="flex items-center justify-center space-x-4">
           <Link
-            className="text-background transition-colors hover:text-gray-100"
+            className="text-foreground transition-colors"
             href="https://github.com/darwin-luque"
             target="_blank"
           >
@@ -20,7 +20,7 @@ export const Footer = () => {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            className="text-background transition-colors hover:text-gray-100"
+            className="text-foreground transition-colors"
             href="https://www.linkedin.com/in/darwin-luque"
             target="_blank"
           >
@@ -28,7 +28,7 @@ export const Footer = () => {
             <span className="sr-only">Linkedin</span>
           </Link>
           <Link
-            className="text-background transition-colors hover:text-gray-100"
+            className="text-foreground transition-colors"
             href="https://twitter.com/dluque_98"
             target="_blank"
           >
@@ -36,7 +36,7 @@ export const Footer = () => {
             <span className="sr-only">Twitter</span>
           </Link>
           <Link
-            className="text-background transition-colors hover:text-gray-100"
+            className="text-foreground transition-colors"
             href="https://www.instagram.com/darwin.vlm"
             target="_blank"
           >
