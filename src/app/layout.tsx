@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/theme";
 import { TRPCReactProvider } from "@/trpc/react";
 import { Navbar } from "@/components/navbar";
 import { cn } from "@/lib/utils";
+import { Footer } from "../components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
             <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
               <Navbar />
               {children}
+              <Footer />
             </div>
           </TRPCReactProvider>
         </ThemeProvider>
