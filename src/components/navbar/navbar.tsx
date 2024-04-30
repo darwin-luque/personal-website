@@ -42,11 +42,11 @@ const portfolio: { title: string; href: string; description: string }[] = [
 ];
 
 export const Navbar: FC = () => (
-  <div className="grid h-16 max-h-max w-full grid-cols-12 items-center">
-    <div className="col-span-4 flex items-center space-x-4 pl-4">
+  <div className="sticky top-0 z-50 grid h-16 max-h-max w-full grid-cols-12 items-center bg-background">
+    <Link href="/" className="col-span-4 flex items-center space-x-4 pl-4">
       <Cpu className="h-6 w-6" />
       <p className="text-lg font-medium">Darwin Luque</p>
-    </div>
+    </Link>
     <div className="col-span-6">
       <NavigationMenu>
         <NavigationMenuList className="w-full">
