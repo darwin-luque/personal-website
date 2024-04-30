@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Github } from "lucide-react";
 import { type FC, Suspense } from "react";
-import { Github, Loader2 } from "lucide-react";
 import { HeroGithubStats } from "./github-stats";
 import { buttonVariants } from "@/components/ui/button";
+import { HeroGithubStatsLoader } from "./github-stats/loader";
 
 export const Hero: FC = () => {
   return (
@@ -31,7 +32,7 @@ export const Hero: FC = () => {
             </Link>
           </div>
           <div className="mt-6 gap-x-5 py-5 lg:mt-10">
-            <Suspense fallback={<Loader2 className="h-4 w-4 animate-spin" />}>
+            <Suspense fallback={<HeroGithubStatsLoader />}>
               <HeroGithubStats />
             </Suspense>
             <div className="mt-5 flex items-center gap-4">

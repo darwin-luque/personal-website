@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TRPCReactProvider>
-            <div className="relative flex min-h-screen flex-col bg-background">
+            <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
               <Navbar />
               {children}
             </div>
