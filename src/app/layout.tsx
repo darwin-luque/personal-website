@@ -1,12 +1,14 @@
 import "@/styles/globals.css";
 
+import emailjs from "@emailjs/browser";
 import { Inter } from "next/font/google";
-
 import { ThemeProvider } from "@/providers/theme";
 import { TRPCReactProvider } from "@/trpc/react";
+import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
-import { Footer } from "../components/footer";
+import { env } from "@/env";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +26,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  emailjs.init({
+    publicKey: env.EMAILJS_PUBLIC_KEY,
+    blockHeadless: true,
+    limitRate: {
+      id: "app",
+      throttle: 10000,
+    },
+  });
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -44,6 +55,7 @@ export default function RootLayout({
               {children}
               <Footer />
             </div>
+            <Toaster />
           </TRPCReactProvider>
         </ThemeProvider>
       </body>

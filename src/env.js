@@ -6,11 +6,15 @@ export const env = createEnv({
     NODE_ENV: z.enum(["development", "test", "production"]),
   },
   client: {
-    NEXT_PUBLIC_GITHUB_URL: z.string().url(),
+    NEXT_PUBLIC_EMAILJS_SERVICE_ID: z.string(),
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: z.string(),
+    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: z.string(),
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    NEXT_PUBLIC_GITHUB_URL: process.env.NEXT_PUBLIC_GITHUB_URL,
+    NEXT_PUBLIC_EMAILJS_SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
