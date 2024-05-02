@@ -28,6 +28,23 @@ export default function PortfolioPage() {
       </section>
       <Separator />
       <section
+        id="testimonials"
+        className="mx-auto flex max-w-5xl flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
+      >
+        <div className="mb-2 flex items-center space-y-2">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight">Testimonials</h2>
+            <p className="text-muted-foreground">
+              Read what my clients and colleagues have to say about working with
+              me. Their testimonials highlight my professionalism, expertise,
+              and commitment to delivering high-quality work. I take pride in
+              building strong relationships and exceeding expectations.
+            </p>
+          </div>
+        </div>
+      </section>
+      <Separator />
+      <section
         id="education"
         className="mx-auto flex max-w-5xl flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
       >
@@ -56,6 +73,24 @@ export default function PortfolioPage() {
               <CoursesTab />
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+      <Separator />
+      <section
+        id="skills"
+        className="mx-auto flex max-w-5xl flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
+      >
+        <div className="mb-2 flex items-center space-y-2">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
+            <p className="text-muted-foreground">
+              Discover my technical and soft skills, which enable me to excel in
+              my work. I&apos;ve developed a diverse skill set that encompasses
+              various programming languages, tools, and methodologies. My skills
+              enable me to tackle complex challenges and deliver innovative
+              solutions.
+            </p>
+          </div>
         </div>
       </section>
     </main>
