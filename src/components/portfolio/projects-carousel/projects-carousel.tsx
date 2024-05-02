@@ -27,7 +27,7 @@ const projects = [
 ];
 
 export const ProjectsCarousel: FC = () => (
-  <Carousel className="w-full max-w-4xl">
+  <Carousel className="w-full">
     <CarouselContent>
       {projects.map((project) => (
         <CarouselItem key={project.id}>

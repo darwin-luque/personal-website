@@ -9,14 +9,13 @@ const config = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "placehold.co",
-        port: "",
-        pathname: "/800x700",
-      }
+        protocol: 'https',
+        hostname: 'mms.businesswire.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
-    dangerouslyAllowSVG: true,
-  }
+  },
 };
 
 export default config;
