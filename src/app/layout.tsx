@@ -1,5 +1,5 @@
-import { LanguageProvider } from "@inlang/paraglide-next"
-import { languageTag } from "@/paraglide/runtime.js"
+import { LanguageProvider } from "@inlang/paraglide-next";
+import { languageTag } from "@/paraglide/runtime.js";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme";
@@ -101,30 +101,30 @@ export default function RootLayout({
 }) {
   return (
     <LanguageProvider>
-   <html lang={languageTag()} suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+      <html lang={languageTag()} suppressHydrationWarning>
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            inter.variable,
+          )}
         >
-          <TRPCReactProvider>
-            <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-            <Toaster />
-          </TRPCReactProvider>
-        </ThemeProvider>
-      </body>
-    </html>
- </LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TRPCReactProvider>
+              <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
+                <Navbar />
+                {children}
+                <Footer />
+              </div>
+              <Toaster />
+            </TRPCReactProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }
