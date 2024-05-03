@@ -32,14 +32,14 @@ export const metadata = {
   creator: "Darwin Luque",
   icons: {
     icon: [
-      { url: "/assets/favicon.ico" },
-      { url: "/assets/favicon.ico", media: "(prefers-color-scheme: dark)" },
-      { url: "/assets/favicon-32x32.png", sizes: "32x32" },
-      { url: "/assets/favicon-16x16.png", sizes: "16x16" },
+      { url: "/favicon.ico" },
+      { url: "/favicon.ico", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16" },
     ],
     apple: [
       {
-        url: "/assets/apple-touch-icon.png",
+        url: "/apple-touch-icon.png",
         sizes: "180x180",
         type: "image/png",
       },
@@ -47,7 +47,7 @@ export const metadata = {
     other: [
       {
         rel: "mask-icon",
-        url: "/assets/safari-pinned-tab.svg",
+        url: "/safari-pinned-tab.svg",
         color: "#5bbad5",
       },
     ],
