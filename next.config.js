@@ -6,6 +6,10 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  i18n: {
+    locales: ["en-US", "es"],
+    defaultLocale: "en-US",
+  },
   images: {
     remotePatterns: [
       {

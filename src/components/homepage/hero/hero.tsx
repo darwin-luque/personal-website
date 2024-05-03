@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import Image from "next/image";
 import { Github } from "lucide-react";
 import { type FC, Suspense } from "react";

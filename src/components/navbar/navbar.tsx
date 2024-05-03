@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import { type FC } from "react";
 import { Cpu } from "lucide-react";
 import {

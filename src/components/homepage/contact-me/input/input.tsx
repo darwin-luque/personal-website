@@ -3,7 +3,7 @@
 import { z } from "zod";
 import type { FC } from "react";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/lib/i18n";
 import { ChevronRight } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";

@@ -1,3 +1,5 @@
+import { LanguageProvider } from "@inlang/paraglide-next"
+import { languageTag } from "@/paraglide/runtime.js"
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme";
@@ -98,7 +100,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <LanguageProvider>
+   <html lang={languageTag()} suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -122,5 +125,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+ </LanguageProvider>
   );
 }
