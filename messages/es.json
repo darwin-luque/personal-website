@@ -1,3 +1,9 @@
 {
-    "$schema": "https://inlang.com/schema/inlang-message-format"
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+
+    "heroBadge": "Construyamos juntos",
+    "heroTitle": "Darwin Luque: Ingeniero de Software",
+    "heroDescription": "Soy un ingeniero de software con pasión por construir soluciones de software escalables. Trabajo con una variedad de tecnologías para crear soluciones de software que sean rápidas, seguras y fáciles de usar.",
+    "contactMe": "Contáctame",
+    "githubContributions": "Contribuciones de Github"
 }
