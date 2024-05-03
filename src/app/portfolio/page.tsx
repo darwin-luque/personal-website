@@ -3,6 +3,7 @@ import { ProjectsCarousel } from "@/components/portfolio/projects-carousel";
 import { AcademicTab } from "@/components/portfolio/education/academic-tab";
 import { CoursesTab } from "@/components/portfolio/education/courses-tab";
 import { Separator } from "@/components/ui/separator";
+import { Skills } from "../../components/portfolio/skills";
 
 export default function PortfolioPage() {
   return (
@@ -92,6 +93,7 @@ export default function PortfolioPage() {
             </p>
           </div>
         </div>
+        <Skills />
       </section>
     </main>
   );
