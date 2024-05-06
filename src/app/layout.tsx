@@ -76,15 +76,15 @@ export const metadata = {
     title: "Darwin Luque | Software Developer",
     statusBarStyle: "black-translucent",
     startupImage: [
-      "/assets/apple-touch-image.png",
+      "/apple-touch-image.png",
       {
-        url: "/assets/apple-touch-image.png",
+        url: "/apple-touch-image.png",
         media: "(device-width: 768px) and (device-height: 1024px)",
       },
     ],
   },
   category: "Software Development",
-  manifest: "/assets/site.webmanifest",
+  manifest: "/site.webmanifest",
 } satisfies Metadata;
 
 export const viewport = {
