@@ -1,5 +1,5 @@
 import { LanguageProvider } from "@inlang/paraglide-next";
-import { languageTag } from "@/paraglide/runtime.js";
+import { type AvailableLanguageTag, languageTag } from "@/paraglide/runtime.js";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme";
@@ -94,6 +94,11 @@ export const viewport = {
   ],
 } satisfies Viewport;
 
+const direction: Record<AvailableLanguageTag, "ltr" | "rtl"> = {
+  en: "ltr",
+  es: "ltr",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -101,7 +106,11 @@ export default function RootLayout({
 }) {
   return (
     <LanguageProvider>
-      <html lang={languageTag()} suppressHydrationWarning>
+      <html
+        lang={languageTag()}
+        dir={direction[languageTag()]}
+        suppressHydrationWarning
+      >
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",

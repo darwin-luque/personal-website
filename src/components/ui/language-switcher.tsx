@@ -1,46 +1,61 @@
 "use client";
 
+import { Globe } from "lucide-react";
 import { useMemo, type FC } from "react";
-import { Link, usePathname } from "@/lib/i18n";
+import { english, spanish, toggleLanguage } from "@/paraglide/messages";
+import { usePathname, useRouter } from "@/lib/i18n";
+import { languageTag } from "@/paraglide/runtime";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
+  DropdownMenuRadioItem,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./dropdown-menu";
-import { Button } from "./button";
-import { Globe } from "lucide-react";
-import { english, spanish, toggleLanguage } from "../../paraglide/messages";
+  DropdownMenuRadioGroup,
+} from "@/components/ui/dropdown-menu";
 
 export const LanguageSwitcher: FC = () => {
-  const pathname = usePathname(); //make sure to use the one from `@/lib/i18n`
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // replace language code in the pathname
-  const pathnameTrimmed = useMemo(() => {
-    return pathname.replace(/(en|es)/, "");
-  }, [pathname]);
-
-  console.log(pathnameTrimmed);
+  const langs = useMemo(
+    () =>
+      [
+        {
+          value: "en",
+          label: `🇬🇧 ${english()}`,
+        },
+        {
+          value: "es",
+          label: `🇪🇸 ${spanish()}`,
+        },
+      ] as const,
+    [],
+  );
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="icon">
           <Globe className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">{toggleLanguage()}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem asChild>
-          <Link href={pathnameTrimmed} locale="en">
-            {english()}
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link href={pathnameTrimmed} locale="es">
-            {spanish()}
-          </Link>
-        </DropdownMenuItem>
+        <DropdownMenuRadioGroup
+          value={languageTag()}
+          onValueChange={(lang) =>
+            router.push(pathname, {
+              locale: lang as (typeof langs)[number]["value"],
+            })
+          }
+        >
+          {langs.map((lang) => (
+            <DropdownMenuRadioItem key={lang.value} value={lang.value}>
+              {lang.label}
+            </DropdownMenuRadioItem>
+          ))}
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );
