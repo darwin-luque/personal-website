@@ -1,8 +1,11 @@
 "use client";
 
-import { Link } from "@/lib/i18n";
 import { type FC } from "react";
+import { Link } from "@/lib/i18n";
 import { Cpu } from "lucide-react";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import { ListItem } from "./list-item";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -12,32 +15,46 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { ListItem } from "./list-item";
+import {
+  aboutMe,
+  contact,
+  contactMe,
+  education,
+  educationDescription,
+  navbarAboutMeDescription,
+  navbarContactMeDescription,
+  navbarIntroductionDescription,
+  navbarIntroductionTitle,
+  navbarMainDescription,
+  portfolio,
+  projects,
+  projectsDescription,
+  skills,
+  skillsDescription,
+  testimonials,
+  testimonialsDescription,
+} from "@/paraglide/messages";
 
-const portfolio: { title: string; href: string; description: string }[] = [
+const portfolioItems: { title: string; href: string; description: string }[] = [
   {
-    title: "Projects",
+    title: projects(),
     href: "/portfolio#projects",
-    description:
-      "A collection of projects I have worked on, including open-source projects.",
+    description: projectsDescription(),
   },
   {
-    title: "Testimonials",
+    title: testimonials(),
     href: "/portfolio#testimonials",
-    description:
-      "What people say about me and my work. Testimonials from clients and colleagues.",
+    description: testimonialsDescription(),
   },
   {
-    title: "Education",
+    title: education(),
     href: "/portfolio#education",
-    description:
-      "My educational background, including courses, certifications, and degrees.",
+    description: educationDescription(),
   },
   {
-    title: "Skills",
+    title: skills(),
     href: "/portfolio#skills",
-    description: "A list of skills I have acquired over the years.",
+    description: skillsDescription(),
   },
 ];
 
@@ -51,7 +68,7 @@ export const Navbar: FC = () => (
       <NavigationMenu>
         <NavigationMenuList className="w-full">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
+            <NavigationMenuTrigger>{aboutMe()}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -65,30 +82,31 @@ export const Navbar: FC = () => (
                         Darwin Luque
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        I am a software engineer who loves to build things. Get
-                        to know me better.
+                        {navbarMainDescription()}
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/#introduction" title="Introduction">
-                  A brief welcome message introducing myself.
+                <ListItem
+                  href="/#introduction"
+                  title={navbarIntroductionTitle()}
+                >
+                  {navbarIntroductionDescription()}
                 </ListItem>
-                <ListItem href="/#about-me" title="About me">
-                  A concise summary of who am I, my background, skills, and
-                  interests.
+                <ListItem href="/#about-me" title={aboutMe()}>
+                  {navbarAboutMeDescription()}
                 </ListItem>
-                <ListItem href="/#contact-me" title="Contact Me">
-                  Let&apos;s talk.
+                <ListItem href="/#contact-me" title={contactMe()}>
+                  {navbarContactMeDescription()}
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
+            <NavigationMenuTrigger>{portfolio()}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {portfolio.map((component) => (
+                {portfolioItems.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -103,7 +121,7 @@ export const Navbar: FC = () => (
           <NavigationMenuItem>
             <Link href="/contact-me" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact
+                {contact()}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -112,6 +130,7 @@ export const Navbar: FC = () => (
     </div>
     <div className="col-span-2 ml-auto flex items-center space-x-4 pr-4">
       <ModeToggle />
+      <LanguageSwitcher />
     </div>
   </div>
 );

@@ -13,8 +13,8 @@ const config = paraglide({
     outdir: "./src/paraglide"
   },
   i18n: {
-    locales: ["en-US", "es"],
-    defaultLocale: "en-US",
+    locales: ["en", "es"],
+    defaultLocale: "en",
   },
   images: {
     remotePatterns: [
@@ -31,6 +31,7 @@ const config = paraglide({
         pathname: "/800x700",
       },
     ],
+    dangerouslyAllowSVG: true,
   },
 });
 
