@@ -30,6 +30,12 @@ const config = paraglide({
         port: "",
         pathname: "/800x700",
       },
+      {
+        protocol: "https",
+        hostname: "copilot.microsoft.com",
+        port: "",
+        pathname: "/rp/**",
+      },
     ],
     dangerouslyAllowSVG: true,
   },

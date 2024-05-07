@@ -25,18 +25,20 @@ import {
   SiDigitalocean,
   SiAmazonroute53,
   SiAmazondynamodb,
+  SiOpenai,
 } from "react-icons/si";
-import { RefreshCcw } from "lucide-react";
-import type { ISkill } from "./skill";
+import { GitGraph, RefreshCcw } from "lucide-react";
+import Image from "next/image";
+
+export type ISkill = {
+  id: number;
+  name: string;
+  level: number; // 1-100
+  icon: JSX.Element;
+  color: string;
+};
 
 export const skills = [
-  {
-    id: 1,
-    name: "JavaScript",
-    level: 100,
-    color: "[#f7df1e]",
-    icon: <SiJavascript className="text-[#f7df1e]" />,
-  },
   {
     id: 2,
     name: "Typescript",
@@ -59,18 +61,61 @@ export const skills = [
     icon: <SiNextdotjs className="text-primary" />,
   },
   {
-    id: 5,
-    name: "NestJS",
-    level: 95,
-    color: "[#e0234e]",
-    icon: <SiNestjs className="text-[#e0234e]" />,
-  },
-  {
     id: 6,
     name: "Node.js",
     level: 90,
     color: "[#8cc84b]",
     icon: <SiNodedotjs className="text-[#8cc84b]" />,
+  },
+  {
+    id: 30,
+    name: "Git",
+    level: 90,
+    color: "primary",
+    icon: <GitGraph className="text-primary" />,
+  },
+  {
+    id: 31,
+    name: "OpenAI",
+    level: 80,
+    color: "primary",
+    icon: <SiOpenai className="text-primary" />,
+  },
+  {
+    id: 32,
+    name: "LangChain",
+    level: 80,
+    color: "primary",
+    icon: <p>🦜</p>,
+  },
+  {
+    id: 33,
+    name: "Copilot",
+    level: 80,
+    color: "primary",
+    icon: (
+      <Image
+        src="https://copilot.microsoft.com/rp/vE266_E90czuUc-Fs55Qoq9hIBc.svg"
+        alt="Github Copilot"
+        width={120}
+        height={120}
+        className="h-4 w-4 "
+      />
+    ),
+  },
+  {
+    id: 1,
+    name: "JavaScript",
+    level: 100,
+    color: "[#f7df1e]",
+    icon: <SiJavascript className="text-[#f7df1e]" />,
+  },
+  {
+    id: 5,
+    name: "NestJS",
+    level: 95,
+    color: "[#e0234e]",
+    icon: <SiNestjs className="text-[#e0234e]" />,
   },
   {
     id: 7,
