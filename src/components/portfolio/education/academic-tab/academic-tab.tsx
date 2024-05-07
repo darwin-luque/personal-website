@@ -6,25 +6,29 @@ import {
   CardContent,
   CardDescription,
 } from "@/components/ui/card";
+import {
+  collegeDegree,
+  highSchoolDegree,
+  collegeDescription,
+  highSchoolDescription,
+} from "@/paraglide/messages";
 
 const academics = [
   {
     id: 1,
     institution: "Universidad Tecnológica Centroamericana (UNITEC)",
-    degree: "Mechatronics Engineering",
+    degree: collegeDegree(),
     duration: "2015 - 2020",
     location: "San Pedro Sula, Honduras",
-    description:
-      "In this program, I learned about the integration of mechanical, electrical, and computer engineering to create intelligent systems. I also learned about robotics, automation, and control systems.",
+    description: collegeDescription(),
   },
   {
     id: 2,
     institution: "Instituto Morazanni",
-    degree: "High School Diploma",
+    degree: highSchoolDegree(),
     duration: "2011 - 2015",
     location: "San Pedro Sula, Honduras",
-    description:
-      "During my time in high school, I learned about the basics of science, math, and literature. I got the oportunity to participate and win in multiple math, and chess contests.",
+    description: highSchoolDescription(),
   },
 ];
 

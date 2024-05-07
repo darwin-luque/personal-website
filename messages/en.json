@@ -56,5 +56,10 @@
   "authentic": "Authentic",
 
   "anotherBlogApp": "Another Blog App",
-  "anotherBlogAppDescription": "A simple blog app built with Next.js and Tailwind CSS."
+  "anotherBlogAppDescription": "A simple blog app built with Next.js and Tailwind CSS.",
+
+  "collegeDegree": "Mechatronics Engineering",
+  "collegeDescription": "In this program, I learned about the integration of mechanical, electrical, and computer engineering to create intelligent systems. I also learned about robotics, automation, and control systems.",
+  "highSchoolDegree": "High School Diploma",
+  "highSchoolDescription": "During my time in high school, I learned about the basics of science, math, and literature. I got the oportunity to participate and win in multiple math, and chess contests."
 }
