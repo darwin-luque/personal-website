@@ -16,26 +16,33 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
-  aboutMe,
+  skills,
   contact,
+  aboutMe,
+  projects,
+  portfolio,
   contactMe,
   education,
+  experience,
+  testimonials,
+  skillsDescription,
+  projectsDescription,
   educationDescription,
+  experienceDescription,
+  navbarMainDescription,
+  testimonialsDescription,
+  navbarIntroductionTitle,
   navbarAboutMeDescription,
   navbarContactMeDescription,
   navbarIntroductionDescription,
-  navbarIntroductionTitle,
-  navbarMainDescription,
-  portfolio,
-  projects,
-  projectsDescription,
-  skills,
-  skillsDescription,
-  testimonials,
-  testimonialsDescription,
 } from "@/paraglide/messages";
 
 const portfolioItems: { title: string; href: string; description: string }[] = [
+  {
+    title: experience(),
+    href: "/portfolio#experience",
+    description: experienceDescription(),
+  },
   {
     title: projects(),
     href: "/portfolio#projects",
