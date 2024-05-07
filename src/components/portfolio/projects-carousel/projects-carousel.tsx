@@ -53,7 +53,7 @@ export const ProjectsCarousel: FC = () => (
                     aria-hidden="true"
                     width={3012}
                     height={1605}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full rounded-lg object-contain"
                   />
                 </a>
               </CardContent>
