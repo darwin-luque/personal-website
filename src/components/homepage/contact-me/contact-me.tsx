@@ -8,6 +8,16 @@ import {
 } from "lucide-react";
 import type { FC } from "react";
 import { ContactMeInput } from "./input";
+import {
+  authentic,
+  collaborative,
+  driven,
+  empathetic,
+  innovative,
+  invitation,
+  letsTalk,
+  versatile,
+} from "@/paraglide/messages";
 import { buttonVariants } from "@/components/ui/button";
 
 export const ContactMe: FC = () => {
@@ -16,12 +26,9 @@ export const ContactMe: FC = () => {
       <div className="container py-24 lg:py-32">
         <div className="text-center">
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Let&apos;s talk
+            {letsTalk()}
           </h1>
-          <p className="mt-3 text-xl text-muted-foreground">
-            I&apos;m always open to new projects and collaborations. Let&apos;s
-            build something great!
-          </p>
+          <p className="mt-3 text-xl text-muted-foreground">{invitation()}</p>
           <div className="relative mx-auto mt-7 max-w-xl sm:mt-12">
             <ContactMeInput />
             <div className="absolute end-0 top-0 hidden -translate-y-12 translate-x-20 md:block">
@@ -74,27 +81,27 @@ export const ContactMe: FC = () => {
           <div className="mt-10 flex flex-wrap justify-center gap-2 sm:mt-20">
             <p className={buttonVariants({ variant: "outline" })}>
               <HandHeart className="mr-2 h-auto w-3 flex-shrink-0" />
-              Empathetic
+              {empathetic()}
             </p>
             <p className={buttonVariants({ variant: "outline" })}>
               <Shuffle className="mr-2 h-auto w-3 flex-shrink-0" />
-              Versatile
+              {versatile()}
             </p>
             <p className={buttonVariants({ variant: "outline" })}>
               <BrainCircuit className="mr-2 h-auto w-3 flex-shrink-0" />
-              Innovative
+              {innovative()}
             </p>
             <p className={buttonVariants({ variant: "outline" })}>
               <Handshake className="mr-2 h-auto w-3 flex-shrink-0" />
-              Collaborative
+              {collaborative()}
             </p>
             <p className={buttonVariants({ variant: "outline" })}>
               <ShipWheel className="mr-2 h-auto w-3 flex-shrink-0" />
-              Driven
+              {driven()}
             </p>
             <p className={buttonVariants({ variant: "outline" })}>
               <Award className="mr-2 h-auto w-3 flex-shrink-0" />
-              Authentic
+              {authentic()}
             </p>
           </div>
         </div>
