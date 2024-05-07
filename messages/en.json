@@ -34,5 +34,15 @@
   "system": "System",
   "toggleLanguage": "Toggle Language",
   "english": "English",
-  "spanish": "Spanish"
+  "spanish": "Spanish",
+
+  "aboutMeWelcome": "Welcome to my portfolio!",
+  "aboutMeDescription": "I am a software engineer who loves to build things. I have a background in software development and have been working in the industry for over {plusYears} years. I have experience in building web applications, mobile applications, and APIs. I am passionate about technology and enjoy learning new things. I am always looking for new challenges and opportunities to grow.",
+  "seeMyCoreValues": "See my core values",
+  "humble": "Humble",
+  "humbleDescription": "I value humility, embracing a mindset of openness, continuous learning, and self-awareness. It&apos;s about recognizing our strengths while staying grounded and respectful of others.",
+  "helpOthers": "Help others",
+  "helpOthersDescription": "I prioritize helping others, striving to make a positive impact in both professional and personal settings. Whether through mentorship, volunteering, or collaboration, I believe in lifting others up and fostering a supportive community.",
+  "mastery": "Mastery",
+  "masteryDescription": "I pursue mastery, dedicating myself to continuous improvement, innovation, and excellence in my craft. It&apos;s about pushing boundaries, honing skills, and striving for the highest level of proficiency and expertise."
 }

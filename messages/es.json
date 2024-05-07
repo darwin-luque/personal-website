@@ -34,5 +34,15 @@
   "system": "Sistema",
   "toggleLanguage": "Alternar idioma",
   "english": "Inglés",
-  "spanish": "Español"
+  "spanish": "Español",
+
+  "aboutMeWelcome": "¡Bienvenido a mi portafolio!",
+  "aboutMeDescription": "Soy un ingeniero de software que ama construir cosas. Tengo experiencia en desarrollo de software y he trabajado en la industria durante más de {plusYears} años. Tengo experiencia en la construcción de aplicaciones web, aplicaciones móviles y APIs. Me apasiona la tecnología y disfruto aprendiendo cosas nuevas. Siempre estoy buscando nuevos desafíos y oportunidades para crecer.",
+  "seeMyCoreValues": "Ver mis valores fundamentales",
+  "humble": "Humildad",
+  "humbleDescription": "Valoro la humildad, adoptando una mentalidad de apertura, aprendizaje continuo y autoconciencia. Se trata de reconocer nuestras fortalezas mientras nos mantenemos con los pies en la tierra y respetuosos con los demás.",
+  "helpOthers": "Ayudar a los demás",
+  "helpOthersDescription": "Priorizo ayudar a los demás, esforzándome por tener un impacto positivo tanto en entornos profesionales como personales. Ya sea a través de la mentoría, el voluntariado o la colaboración, creo en elevar a los demás y fomentar una comunidad de apoyo.",
+  "mastery": "Maestría",
+  "masteryDescription": "Busco la maestría, dedicándome a la mejora continua, la innovación y la excelencia en mi oficio. Se trata de empujar los límites, perfeccionar habilidades y esforzarse por el más alto nivel de competencia y experiencia."
 }
