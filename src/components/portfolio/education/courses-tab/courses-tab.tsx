@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { viewCertification } from "@/paraglide/messages";
 
 type Course = {
   id: number;
@@ -153,7 +154,7 @@ export const CoursesTab: FC = () => {
               rel="noopener noreferrer"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              View Certification
+              {viewCertification()}
             </a>
           </CardContent>
         </Card>
