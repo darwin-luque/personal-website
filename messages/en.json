@@ -53,5 +53,8 @@
   "innovative": "Innovative",
   "collaborative": "Collaborative",
   "driven": "Driven",
-  "authentic": "Authentic"
+  "authentic": "Authentic",
+
+  "anotherBlogApp": "Another Blog App",
+  "anotherBlogAppDescription": "A simple blog app built with Next.js and Tailwind CSS."
 }

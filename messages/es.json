@@ -53,5 +53,8 @@
   "innovative": "Innovador",
   "collaborative": "Colaborativo",
   "driven": "Motivado",
-  "authentic": "Auténtico"
+  "authentic": "Auténtico",
+
+  "anotherBlogApp": "Another Blog App",
+  "anotherBlogAppDescription": "Una simple aplicación de blogs construida con Next.js y Tailwind CSS."
 }

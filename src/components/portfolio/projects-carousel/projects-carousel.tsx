@@ -8,18 +8,22 @@ import {
 } from "@/components/ui/carousel";
 import {
   Card,
+  CardTitle,
+  CardHeader,
   CardContent,
   CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import {
+  anotherBlogApp,
+  anotherBlogAppDescription,
+} from "@/paraglide/messages";
 
 const projects = [
   {
     id: "another-blog-app",
-    title: "Another Blog App",
-    description: "A simple blog app built with Next.js and Tailwind CSS.",
+    title: anotherBlogApp(),
+    description: anotherBlogAppDescription(),
     previewImage: "/blog-app-preview.png",
     alt: "Preview Screenshot of another-blog-app.vercel.app",
     url: "https://another-blog-app.vercel.app/",
