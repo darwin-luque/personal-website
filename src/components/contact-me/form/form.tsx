@@ -13,19 +13,34 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
   FormLabel,
+  FormControl,
 } from "@/components/ui/form";
 import {
   Card,
+  CardTitle,
+  CardHeader,
   CardContent,
   CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { env } from "@/env";
+import {
+  name,
+  email,
+  message,
+  subject,
+  contactMe,
+  sendMessage,
+  namePlaceholder,
+  emailPlaceholder,
+  messagePlaceholder,
+  subjectPlaceholder,
+  contactMeDescription,
+  messageSentError,
+  messageSent,
+} from "@/paraglide/messages";
 
 const formSchema = z.object({
   name: z.string().min(1),
@@ -56,13 +71,13 @@ export const ContactMeForm: FC = () => {
           limitRate: {
             id: "contact me",
             throttle: 1000,
-          }
+          },
         },
       )
-      .then(() => toast("Message sent!"))
+      .then(() => toast(messageSent()))
       .catch((error) => {
         console.error(error);
-        toast("An error occurred while sending the message.");
+        toast(messageSentError());
       });
 
     form.reset();
@@ -74,10 +89,9 @@ export const ContactMeForm: FC = () => {
       <Form {...form}>
         <form onSubmit={onSubmit}>
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">Contact me</CardTitle>
+            <CardTitle className="text-3xl font-bold">{contactMe()}</CardTitle>
             <CardDescription className="text-gray-500 dark:text-gray-400">
-              Want to get in touch? Fill out the form below to send me a
-              message.
+              {contactMeDescription()}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -87,9 +101,9 @@ export const ContactMeForm: FC = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{name()}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your name" {...field} />
+                      <Input placeholder={namePlaceholder()} {...field} />
                     </FormControl>
                   </FormItem>
                 )}
@@ -99,10 +113,10 @@ export const ContactMeForm: FC = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{email()}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Enter your email"
+                        placeholder={emailPlaceholder()}
                         type="email"
                         {...field}
                       />
@@ -116,12 +130,9 @@ export const ContactMeForm: FC = () => {
               name="subject"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel>Subject</FormLabel>
+                  <FormLabel>{subject()}</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="Enter the subject of your message"
-                      {...field}
-                    />
+                    <Input placeholder={subjectPlaceholder()} {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -131,11 +142,11 @@ export const ContactMeForm: FC = () => {
               name="message"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{message()}</FormLabel>
                   <FormControl>
                     <Textarea
                       className="min-h-[100px]"
-                      placeholder="Enter your message"
+                      placeholder={messagePlaceholder()}
                       {...field}
                     />
                   </FormControl>
@@ -146,7 +157,7 @@ export const ContactMeForm: FC = () => {
               {isPending ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
-                "Send message"
+                sendMessage()
               )}
             </Button>
           </CardContent>

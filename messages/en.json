@@ -70,5 +70,18 @@
   "educationSectionDescription": "Explore my academic background, which underpins my expertise in Engineering. I&apos;ve pursued studies at various institutions, honing my skills and knowledge in the diverse realms of engineering. My educational journey reflects my commitment to continuous learning and growth.",
   "skillsSectionDescription": "Discover my technical and soft skills, which enable me to excel in my work. I&apos;ve developed a diverse skill set that encompasses various programming languages, tools, and methodologies. My skills enable me to tackle complex challenges and deliver innovative solutions.",
   "academic": "Academic",
-  "courses": "Courses"
+  "courses": "Courses",
+
+  "contactMeDescription": "Want to get in touch? Fill out the form below to send me a message.",
+  "name": "Name",
+  "namePlaceholder": "Enter your name...",
+  "email": "Email",
+  "emailPlaceholder": "Enter your email...",
+  "subject": "Subject",
+  "subjectPlaceholder": "Enter the subject of your message",
+  "message": "Message",
+  "messagePlaceholder": "Enter your message",
+  "sendMessage": "Send Message",
+  "messageSent": "Message sent successfully!",
+  "messageSentError": "An error occurred while sending the message."
 }
