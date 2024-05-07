@@ -63,5 +63,12 @@
   "highSchoolDegree": "Diploma de escuela secundaria",
   "highSchoolDescription": "Durante mi tiempo en la escuela secundaria, aprendí sobre los conceptos básicos de ciencia, matemáticas y literatura. Tuve la oportunidad de participar y ganar en múltiples concursos de matemáticas y ajedrez.",
 
-  "viewCertification": "Ver Certificación"
+  "viewCertification": "Ver Certificación",
+
+  "projectsSectionDescription": "Explora mi portafolio que muestra proyectos innovadores que reflejan mi experiencia, creatividad y dedicación a la excelencia. Cada proyecto demuestra mi capacidad para abordar desafíos y ofrecer soluciones impactantes.",
+  "testimonialsSectionDescription": "Lee lo que mis clientes y colegas tienen que decir sobre trabajar conmigo. Sus testimonios destacan mi profesionalismo, experiencia y compromiso con la entrega de trabajos de alta calidad. Me enorgullece construir relaciones sólidas y superar las expectativas.",
+  "educationSectionDescription": "Explora mi formación académica, que respalda mi experiencia en Ingeniería. He realizado estudios en diversas instituciones, perfeccionando mis habilidades y conocimientos en los diversos ámbitos de la ingeniería. Mi trayectoria educativa refleja mi compromiso con el aprendizaje continuo y el crecimiento.",
+  "skillsSectionDescription": "Descubre mis habilidades técnicas y blandas, que me permiten destacar en mi trabajo. He desarrollado un conjunto de habilidades diverso que abarca varios lenguajes de programación, herramientas y metodologías. Mis habilidades me permiten abordar desafíos complejos y ofrecer soluciones innovadoras.",
+  "academic": "Académico",
+  "courses": "Cursos"
 }

@@ -3,7 +3,19 @@ import { ProjectsCarousel } from "@/components/portfolio/projects-carousel";
 import { AcademicTab } from "@/components/portfolio/education/academic-tab";
 import { CoursesTab } from "@/components/portfolio/education/courses-tab";
 import { Separator } from "@/components/ui/separator";
-import { Skills } from "../../components/portfolio/skills";
+import { Skills } from "@/components/portfolio/skills";
+import {
+  skills,
+  courses,
+  academic,
+  projects,
+  education,
+  testimonials,
+  skillsDescription,
+  projectsDescription,
+  educationDescription,
+  testimonialsDescription,
+} from "@/paraglide/messages";
 
 export default function PortfolioPage() {
   return (
@@ -14,13 +26,8 @@ export default function PortfolioPage() {
       >
         <div className="mb-2 flex items-center space-y-2">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
-            <p className="text-muted-foreground">
-              Explore my portfolio showcasing innovative projects that reflect
-              my expertise, creativity, and dedication to excellence. Each
-              project demonstrates my ability to tackle challenges and deliver
-              impactful solutions.
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight">{projects()}</h2>
+            <p className="text-muted-foreground">{projectsDescription()}</p>
           </div>
         </div>
         <div className="flex w-full justify-center">
@@ -34,13 +41,10 @@ export default function PortfolioPage() {
       >
         <div className="mb-2 flex items-center space-y-2">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight">Testimonials</h2>
-            <p className="text-muted-foreground">
-              Read what my clients and colleagues have to say about working with
-              me. Their testimonials highlight my professionalism, expertise,
-              and commitment to delivering high-quality work. I take pride in
-              building strong relationships and exceeding expectations.
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight">
+              {testimonials()}
+            </h2>
+            <p className="text-muted-foreground">{testimonialsDescription()}</p>
           </div>
         </div>
       </section>
@@ -51,21 +55,15 @@ export default function PortfolioPage() {
       >
         <div className="mb-2 flex items-center space-y-2">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight">Education</h2>
-            <p className="text-muted-foreground">
-              Explore my academic background, which underpins my expertise in
-              Engineering. I&apos;ve pursued studies at various institutions,
-              honing my skills and knowledge in the diverse realms of
-              engineering. My educational journey reflects my commitment to
-              continuous learning and growth.
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight">{education()}</h2>
+            <p className="text-muted-foreground">{educationDescription()}</p>
           </div>
         </div>
         <div className="flex w-full justify-center">
           <Tabs defaultValue="academic" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="academic">Academic</TabsTrigger>
-              <TabsTrigger value="courses">Courses</TabsTrigger>
+              <TabsTrigger value="academic">{academic()}</TabsTrigger>
+              <TabsTrigger value="courses">{courses()}</TabsTrigger>
             </TabsList>
             <TabsContent value="academic">
               <AcademicTab />
@@ -83,14 +81,8 @@ export default function PortfolioPage() {
       >
         <div className="mb-2 flex items-center space-y-2">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
-            <p className="text-muted-foreground">
-              Discover my technical and soft skills, which enable me to excel in
-              my work. I&apos;ve developed a diverse skill set that encompasses
-              various programming languages, tools, and methodologies. My skills
-              enable me to tackle complex challenges and deliver innovative
-              solutions.
-            </p>
+            <h2 className="text-2xl font-bold tracking-tight">{skills()}</h2>
+            <p className="text-muted-foreground">{skillsDescription()}</p>
           </div>
         </div>
         <Skills />

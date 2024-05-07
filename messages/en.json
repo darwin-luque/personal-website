@@ -63,5 +63,12 @@
   "highSchoolDegree": "High School Diploma",
   "highSchoolDescription": "During my time in high school, I learned about the basics of science, math, and literature. I got the oportunity to participate and win in multiple math, and chess contests.",
 
-  "viewCertification": "View Certification"
+  "viewCertification": "View Certification",
+
+  "projectsSectionDescription": "Explore my portfolio showcasing innovative projects that reflect my expertise, creativity, and dedication to excellence. Each project demonstrates my ability to tackle challenges and deliver impactful solutions.",
+  "testimonialsSectionDescription": "Read what my clients and colleagues have to say about working with me. Their testimonials highlight my professionalism, expertise, and commitment to delivering high-quality work. I take pride in building strong relationships and exceeding expectations.",
+  "educationSectionDescription": "Explore my academic background, which underpins my expertise in Engineering. I&apos;ve pursued studies at various institutions, honing my skills and knowledge in the diverse realms of engineering. My educational journey reflects my commitment to continuous learning and growth.",
+  "skillsSectionDescription": "Discover my technical and soft skills, which enable me to excel in my work. I&apos;ve developed a diverse skill set that encompasses various programming languages, tools, and methodologies. My skills enable me to tackle complex challenges and deliver innovative solutions.",
+  "academic": "Academic",
+  "courses": "Courses"
 }
