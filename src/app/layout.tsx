@@ -3,7 +3,6 @@ import { type AvailableLanguageTag, languageTag } from "@/paraglide/runtime.js";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme";
-import { TRPCReactProvider } from "@/trpc/react";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -123,14 +122,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TRPCReactProvider>
-              <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
-                <Navbar />
-                {children}
-                <Footer />
-              </div>
-              <Toaster />
-            </TRPCReactProvider>
+            <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>

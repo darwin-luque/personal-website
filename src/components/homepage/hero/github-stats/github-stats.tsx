@@ -1,6 +1,5 @@
 import { GitMerge } from "lucide-react";
 import { type FC } from "react";
-import { api } from "@/trpc/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   currentYear,
@@ -8,6 +7,7 @@ import {
   notThatBad,
   pastFourYears,
 } from "@/paraglide/messages";
+import { scrapeGitHubContributions } from "@/lib/scrape";
 
 export const HeroGithubStats: FC = async () => {
   const thisYear = new Date().getFullYear();
@@ -17,8 +17,7 @@ export const HeroGithubStats: FC = async () => {
     thisYear - 2,
     thisYear - 3,
   ];
-  const contributions = await api.github.getContributions({
-    username: "darwin-luque",
+  const contributions = await scrapeGitHubContributions("darwin-luque", {
     format: "nested",
     fetchAll: false,
     lastYear: false,
