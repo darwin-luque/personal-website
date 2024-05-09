@@ -66,7 +66,7 @@
   "highSchoolDescription": "Durante mi tiempo en la escuela secundaria, aprendí sobre los conceptos básicos de ciencia, matemáticas y literatura. Tuve la oportunidad de participar y ganar en múltiples concursos de matemáticas y ajedrez.",
 
   "viewCertification": "Ver Certificación",
-
+  "experienceSectionDescription": "Explora mi experiencia profesional, incluidos mis roles, responsabilidades y logros. He trabajado con diversas empresas y equipos, contribuyendo al desarrollo de soluciones de software que impulsan el crecimiento y la innovación empresarial.",
   "projectsSectionDescription": "Explora mi portafolio que muestra proyectos innovadores que reflejan mi experiencia, creatividad y dedicación a la excelencia. Cada proyecto demuestra mi capacidad para abordar desafíos y ofrecer soluciones impactantes.",
   "testimonialsSectionDescription": "Lee lo que mis clientes y colegas tienen que decir sobre trabajar conmigo. Sus testimonios destacan mi profesionalismo, experiencia y compromiso con la entrega de trabajos de alta calidad. Me enorgullece construir relaciones sólidas y superar las expectativas.",
   "educationSectionDescription": "Explora mi formación académica, que respalda mi experiencia en Ingeniería. He realizado estudios en diversas instituciones, perfeccionando mis habilidades y conocimientos en los diversos ámbitos de la ingeniería. Mi trayectoria educativa refleja mi compromiso con el aprendizaje continuo y el crecimiento.",
@@ -85,5 +85,12 @@
   "messagePlaceholder": "Ingresa tu mensaje",
   "sendMessage": "Enviar mensaje",
   "messageSent": "¡Mensaje enviado con éxito!",
-  "messageSentError": "Se produjo un error al enviar el mensaje."
+  "messageSentError": "Se produjo un error al enviar el mensaje.",
+
+  "softwareEngineerJobDescription1": "Ingeniero de software experimentado experto en el desarrollo de soluciones innovadoras en diversos dominios, incluidos CMS, aplicaciones full-stack, desarrollo web, computación en la nube e IA. Con una sólida base en resolución de problemas y colaboración, entrego productos de alta calidad a tiempo y dentro del presupuesto. Trabajé con tecnologías que puedes encontrar en mi de sección de",
+  "softwareEngineerJobDescription2": ".",
+  "techLeadJobDescription": "Tech Lead experimentado especializado en guiar equipos, impulsar la excelencia técnica y lograr resultados exitosos. Especializado en gestión de proyectos, diseño de arquitectura e implementación de tecnología, fomento la colaboración y la innovación para lograr los objetivos organizacionales.",
+  "engineeringManagerJobDescription": "Gerente de Ingeniería experimentado experto en liderar y desarrollar equipos de alto rendimiento para ofrecer soluciones innovadoras. Con un enfoque en la planificación estratégica, el desarrollo de talento y la ejecución de proyectos, fomento una cultura de colaboración y excelencia. Al alinear los esfuerzos del equipo con los objetivos organizacionales, impulso el éxito e inspiro el crecimiento en entornos de ingeniería dinámicos.",
+  "supportHeroJobDescription": "Proporcioné soporte por correo electrónico para Duet Display, una aplicación de uso compartido de pantalla multiplataforma para Apple, Windows y Android. Brindé asistencia de primer nivel, resolviendo consultas y problemas para garantizar experiencias de usuario excepcionales.",
+  "itSupportJobDescription": "Como parte de mi programa de becas universitarias, me desempeñé como Especialista en Soporte de TI, brindando asistencia técnica exclusivamente a los miembros del personal universitario. En este rol, diagnosticaba y resolvía problemas de hardware y software, configuraba sistemas informáticos y aseguraba el funcionamiento fluido de la infraestructura de TI. Además, asistí con la resolución de problemas de red, documenté tickets de soporte y contribuí a mejorar la eficiencia de la experiencia tecnológica de los miembros del personal universitario."
 }

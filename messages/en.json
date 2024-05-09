@@ -67,6 +67,7 @@
 
   "viewCertification": "View Certification",
 
+  "experienceSectionDescription": "Explore my professional experience, including my roles, responsibilities, and achievements. I&apos;ve worked with various companies and teams, contributing to the development of software solutions that drive business growth and innovation.",
   "projectsSectionDescription": "Explore my portfolio showcasing innovative projects that reflect my expertise, creativity, and dedication to excellence. Each project demonstrates my ability to tackle challenges and deliver impactful solutions.",
   "testimonialsSectionDescription": "Read what my clients and colleagues have to say about working with me. Their testimonials highlight my professionalism, expertise, and commitment to delivering high-quality work. I take pride in building strong relationships and exceeding expectations.",
   "educationSectionDescription": "Explore my academic background, which underpins my expertise in Engineering. I&apos;ve pursued studies at various institutions, honing my skills and knowledge in the diverse realms of engineering. My educational journey reflects my commitment to continuous learning and growth.",
@@ -85,5 +86,12 @@
   "messagePlaceholder": "Enter your message",
   "sendMessage": "Send Message",
   "messageSent": "Message sent successfully!",
-  "messageSentError": "An error occurred while sending the message."
+  "messageSentError": "An error occurred while sending the message.",
+
+  "softwareEngineerJobDescription1": "Experienced software engineer adept in developing innovative solutions across various domains, including CMS, full-stack applications, web development, cloud computing, and AI. With a strong foundation in problem-solving and collaboration, I deliver high-quality products on time and within budget. Worked with technologies you can find in my",
+  "softwareEngineerJobDescription2": "section.",
+  "techLeadJobDescription": "Experienced Tech Lead skilled in guiding teams, driving technical excellence, and delivering successful outcomes. Specializing in project management, architecture design, and technology implementation, I foster collaboration and innovation to achieve organizational objectives.",
+  "engineeringManagerJobDescription": "Experienced Engineering Manager adept at leading and developing high-performing teams to deliver innovative solutions. With a focus on strategic planning, talent development, and project execution, I foster a culture of collaboration and excellence. By aligning team efforts with organizational goals, I drive success and inspire growth in dynamic engineering environments.",
+  "supportHeroJobDescription": "Provided prompt email support for Duet Display, a multi-platform display sharing app for Apple, Windows, and Android. Delivered top-tier assistance, resolving inquiries and issues to ensure exceptional user experiences.",
+  "itSupportJobDescription": "As part of my college scholarship program, I served as an IT Support Specialist, providing technical assistance exclusively to college staff members. In this role, I diagnosed and resolved hardware and software issues, configured computer systems, and ensured the smooth operation of IT infrastructure. Additionally, I assisted with network troubleshooting, documented support tickets, and contributed to enhancing the efficiency of college staff members' technology experience."
 }
