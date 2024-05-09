@@ -1,7 +1,6 @@
 "use client";
 
 import { type FC } from "react";
-import { Link } from "@/lib/i18n";
 import { Cpu } from "lucide-react";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { ModeToggle } from "@/components/ui/mode-toggle";
@@ -15,57 +14,43 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  skills,
-  contact,
-  aboutMe,
-  projects,
-  portfolio,
-  contactMe,
-  education,
-  experience,
-  testimonials,
-  skillsDescription,
-  projectsDescription,
-  educationDescription,
-  experienceDescription,
-  navbarMainDescription,
-  testimonialsDescription,
-  navbarIntroductionTitle,
-  navbarAboutMeDescription,
-  navbarContactMeDescription,
-  navbarIntroductionDescription,
-} from "@/paraglide/messages";
+import type { ParamsWithLang, PropsWithDictionary } from "@/lib/types";
+import Link from "next/link";
 
-const portfolioItems: { title: string; href: string; description: string }[] = [
+const portfolioItems = (
+  portfolioDict: PropsWithDictionary["dict"]["navbar"]["portfolio"],
+): { title: string; href: string; description: string }[] => [
   {
-    title: experience(),
+    title: portfolioDict.experience.title,
     href: "/portfolio#experience",
-    description: experienceDescription(),
+    description: portfolioDict.experience.description,
   },
   {
-    title: projects(),
+    title: portfolioDict.projects.title,
     href: "/portfolio#projects",
-    description: projectsDescription(),
+    description: portfolioDict.projects.description,
   },
   {
-    title: testimonials(),
+    title: portfolioDict.testimonials.title,
     href: "/portfolio#testimonials",
-    description: testimonialsDescription(),
+    description: portfolioDict.testimonials.description,
   },
   {
-    title: education(),
+    title: portfolioDict.education.title,
     href: "/portfolio#education",
-    description: educationDescription(),
+    description: portfolioDict.education.description,
   },
   {
-    title: skills(),
+    title: portfolioDict.skills.title,
     href: "/portfolio#skills",
-    description: skillsDescription(),
+    description: portfolioDict.skills.description,
   },
 ];
 
-export const Navbar: FC = () => (
+export const Navbar: FC<PropsWithDictionary<ParamsWithLang>> = ({
+  dict,
+  lang,
+}) => (
   <div className="sticky top-0 z-50 grid h-16 max-h-max w-full grid-cols-12 items-center bg-background">
     <Link href="/" className="col-span-4 flex items-center space-x-4 pl-4">
       <Cpu className="h-6 w-6" />
@@ -75,7 +60,9 @@ export const Navbar: FC = () => (
       <NavigationMenu>
         <NavigationMenuList className="w-full">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>{aboutMe()}</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              {dict.navbar.aboutMe.title}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -89,31 +76,39 @@ export const Navbar: FC = () => (
                         Darwin Luque
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        {navbarMainDescription()}
+                        {dict.navbar.aboutMe.description}
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
                 <ListItem
                   href="/#introduction"
-                  title={navbarIntroductionTitle()}
+                  title={dict.navbar.aboutMe.introduction.title}
                 >
-                  {navbarIntroductionDescription()}
+                  {dict.navbar.aboutMe.introduction.description}
                 </ListItem>
-                <ListItem href="/#about-me" title={aboutMe()}>
-                  {navbarAboutMeDescription()}
+                <ListItem
+                  href="/#about-me"
+                  title={dict.navbar.aboutMe.aboutMe.title}
+                >
+                  {dict.navbar.aboutMe.aboutMe.description}
                 </ListItem>
-                <ListItem href="/#contact-me" title={contactMe()}>
-                  {navbarContactMeDescription()}
+                <ListItem
+                  href="/#contact-me"
+                  title={dict.navbar.aboutMe.contactMe.title}
+                >
+                  {dict.navbar.aboutMe.contactMe.description}
                 </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>{portfolio()}</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              {dict.navbar.portfolio.title}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {portfolioItems.map((component) => (
+                {portfolioItems(dict.navbar.portfolio).map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -128,7 +123,7 @@ export const Navbar: FC = () => (
           <NavigationMenuItem>
             <Link href="/contact-me" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {contact()}
+                {dict.navbar.contact.title}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -136,8 +131,8 @@ export const Navbar: FC = () => (
       </NavigationMenu>
     </div>
     <div className="col-span-2 ml-auto flex items-center space-x-4 pr-4">
-      <ModeToggle />
-      <LanguageSwitcher />
+      <ModeToggle dict={dict} />
+      <LanguageSwitcher lang={lang} dict={dict} />
     </div>
   </div>
 );

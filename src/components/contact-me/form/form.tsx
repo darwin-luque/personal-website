@@ -26,21 +26,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { env } from "@/env";
-import {
-  name,
-  email,
-  message,
-  subject,
-  contactMe,
-  sendMessage,
-  namePlaceholder,
-  emailPlaceholder,
-  messagePlaceholder,
-  subjectPlaceholder,
-  contactMeDescription,
-  messageSentError,
-  messageSent,
-} from "@/paraglide/messages";
+import type { PropsWithDictionary } from "@/lib/types";
 
 const formSchema = z.object({
   name: z.string().min(1),
@@ -49,7 +35,7 @@ const formSchema = z.object({
   message: z.string().min(1),
 });
 
-export const ContactMeForm: FC = () => {
+export const ContactMeForm: FC<PropsWithDictionary> = ({ dict }) => {
   const params = useSearchParams();
   const [isPending, setIsPending] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -74,10 +60,10 @@ export const ContactMeForm: FC = () => {
           },
         },
       )
-      .then(() => toast(messageSent()))
+      .then(() => toast(dict.contactMe.form.messageSent))
       .catch((error) => {
         console.error(error);
-        toast(messageSentError());
+        toast(dict.contactMe.form.messageSentError);
       });
 
     form.reset();
@@ -89,9 +75,11 @@ export const ContactMeForm: FC = () => {
       <Form {...form}>
         <form onSubmit={onSubmit}>
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">{contactMe()}</CardTitle>
+            <CardTitle className="text-3xl font-bold">
+              {dict.contactMe.form.title}
+            </CardTitle>
             <CardDescription className="text-gray-500 dark:text-gray-400">
-              {contactMeDescription()}
+              {dict.contactMe.form.description}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -101,9 +89,12 @@ export const ContactMeForm: FC = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel>{name()}</FormLabel>
+                    <FormLabel>{dict.contactMe.form.name}</FormLabel>
                     <FormControl>
-                      <Input placeholder={namePlaceholder()} {...field} />
+                      <Input
+                        placeholder={dict.contactMe.form.namePlaceholder}
+                        {...field}
+                      />
                     </FormControl>
                   </FormItem>
                 )}
@@ -113,10 +104,10 @@ export const ContactMeForm: FC = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="space-y-2">
-                    <FormLabel>{email()}</FormLabel>
+                    <FormLabel>{dict.contactMe.form.email}</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder={emailPlaceholder()}
+                        placeholder={dict.contactMe.form.emailPlaceholder}
                         type="email"
                         {...field}
                       />
@@ -130,9 +121,12 @@ export const ContactMeForm: FC = () => {
               name="subject"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel>{subject()}</FormLabel>
+                  <FormLabel>{dict.contactMe.form.subject}</FormLabel>
                   <FormControl>
-                    <Input placeholder={subjectPlaceholder()} {...field} />
+                    <Input
+                      placeholder={dict.contactMe.form.subjectPlaceholder}
+                      {...field}
+                    />
                   </FormControl>
                 </FormItem>
               )}
@@ -142,11 +136,11 @@ export const ContactMeForm: FC = () => {
               name="message"
               render={({ field }) => (
                 <FormItem className="space-y-2">
-                  <FormLabel>{message()}</FormLabel>
+                  <FormLabel>{dict.contactMe.form.message}</FormLabel>
                   <FormControl>
                     <Textarea
                       className="min-h-[100px]"
-                      placeholder={messagePlaceholder()}
+                      placeholder={dict.contactMe.form.messagePlaceholder}
                       {...field}
                     />
                   </FormControl>
@@ -157,7 +151,7 @@ export const ContactMeForm: FC = () => {
               {isPending ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
-                sendMessage()
+                dict.contactMe.form.sendMessage
               )}
             </Button>
           </CardContent>

@@ -1,9 +1,17 @@
 import { Hero } from "@/components/homepage/hero";
 import { Separator } from "@/components/ui/separator";
 import { AboutMe } from "@/components/homepage/about-me";
-import { ContactMe } from "../components/homepage/contact-me";
+import { ContactMe } from "@/components/homepage/contact-me";
+import { getDictionary } from "@/lib/dictionaries";
+import type { ParamsWithLang } from "@/lib/types";
 
-export default async function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: ParamsWithLang;
+}) {
+  const dict = await getDictionary(lang);
+
   return (
     <main className="flex-1">
       <div className="container relative">
@@ -11,21 +19,21 @@ export default async function Home() {
           id="introduction"
           className="mx-auto flex flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
         >
-          <Hero />
+          <Hero dict={dict} />
         </section>
         <Separator />
         <section
           id="about-me"
           className="mx-auto flex flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
         >
-          <AboutMe />
+          <AboutMe dict={dict} />
         </section>
         <Separator />
         <section
           id="contact-me"
           className="mx-auto flex flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
         >
-          <ContactMe />
+          <ContactMe dict={dict} />
         </section>
       </div>
     </main>

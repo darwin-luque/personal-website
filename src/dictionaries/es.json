@@ -1,0 +1,174 @@
+{
+  "hero": {
+    "badge": "Construyamos juntos",
+    "title": "Darwin Luque: Ingeniero de Software",
+    "description": "Soy un ingeniero de software con pasión por construir soluciones de software escalables. Trabajo con una variedad de tecnologías para crear soluciones de software que sean rápidas, seguras y fáciles de usar.",
+    "contactMe": "Contáctame",
+    "currentYear": "Año actual",
+    "pastFourYears": "Últimos 4 años",
+    "notThatBad": "No tan mal para ser honesto"
+  },
+  "github": {
+    "contributions": "Contribuciones de Github",
+    "statsComparison": "{percent}% del año pasado"
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "welcome": "¡Bienvenido a mi portafolio!",
+    "description": "Soy un ingeniero de software que ama construir cosas. Tengo experiencia en desarrollo de software y he trabajado en la industria durante más de {plusYears} años. Tengo experiencia en la construcción de aplicaciones web, aplicaciones móviles y APIs. Me apasiona la tecnología y disfruto aprendiendo cosas nuevas. Siempre estoy buscando nuevos desafíos y oportunidades para crecer.",
+    "seeMyCoreValues": "Ver mis valores fundamentales",
+    "humble": {
+      "title": "Humildad",
+      "description": "Valoro la humildad, adoptando una mentalidad de apertura, aprendizaje continuo y autoconciencia. Se trata de reconocer nuestras fortalezas mientras nos mantenemos con los pies en la tierra y respetuosos con los demás."
+    },
+    "helpOthers": {
+      "title": "Ayudar a los demás",
+      "description": "Priorizo ayudar a los demás, esforzándome por tener un impacto positivo tanto en entornos profesionales como personales. Ya sea a través de la mentoría, el voluntariado o la colaboración, creo en elevar a los demás y fomentar una comunidad de apoyo."
+    },
+    "mastery": {
+      "title": "Maestría",
+      "description": "Busco la maestría, dedicándome a la mejora continua, la innovación y la excelencia en mi oficio. Se trata de empujar los límites, perfeccionar habilidades y esforzarse por el más alto nivel de competencia y experiencia."
+    }
+  },
+  "navbar": {
+    "aboutMe": {
+      "title": "Sobre mí",
+      "description": "Soy un ingeniero de software que ama construir cosas. Conóceme mejor.",
+      "introduction": {
+        "title": "Introducción",
+        "description": "Un breve mensaje de bienvenida presentándome."
+      },
+      "aboutMe": {
+        "title": "Sobre mí",
+        "description": "Un resumen conciso de quién soy, mi formación, habilidades e intereses."
+      },
+      "contactMe": {
+        "title": "Contáctame",
+        "description": "Hablemos."
+      }
+    },
+    "portfolio": {
+      "title": "Portafolio",
+      "experience": {
+        "title": "Experiencia",
+        "description": "Mi experiencia profesional, incluidos puestos, empresas y proyectos."
+      },
+      "projects": {
+        "title": "Proyectos",
+        "description": "Una colección de proyectos en los que he trabajado, incluidos proyectos de código abierto."
+      },
+      "testimonials": {
+        "title": "Testimonios",
+        "description": "Lo que la gente dice sobre mí y mi trabajo."
+      },
+      "education": {
+        "title": "Educación",
+        "description": "Mi formación académica, incluidos cursos, certificaciones y títulos."
+      },
+      "skills": {
+        "title": "Habilidades",
+        "description": "Una lista de habilidades que he adquirido a lo largo de los años."
+      }
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "theme": {
+      "title": "Alternar tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "language": {
+      "title": "Idioma",
+      "english": "Inglés",
+      "spanish": "Español"
+    }
+  },
+
+  "contactMe": {
+    "letsTalk": "Hablemos",
+    "invitation": "Siempre estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente, quieres discutir una posible asociación o simplemente quieres saludar, no dudes en contactarme.",
+    "empathetic": "Empático",
+    "versatile": "Versátil",
+    "innovative": "Innovador",
+    "collaborative": "Colaborativo",
+    "driven": "Motivado",
+    "authentic": "Auténtico",
+    "form": {
+      "title": "Contáctame",
+      "description": "¿Quieres ponerte en contacto? Rellena el formulario a continuación para enviarme un mensaje.",
+      "name": "Nombre",
+      "namePlaceholder": "Ingresa tu nombre...",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico...",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Ingresa el asunto de tu mensaje",
+      "message": "Mensaje",
+      "messagePlaceholder": "Ingresa tu mensaje",
+      "sendMessage": "Enviar mensaje",
+      "messageSent": "¡Mensaje enviado con éxito!",
+      "messageSentError": "Se produjo un error al enviar el mensaje."
+    }
+  },
+  "portfolio": {
+    "experience": {
+      "title": "Experiencia",
+      "description": "Explora mi experiencia profesional, incluidos mis roles, responsabilidades y logros. He trabajado con diversas empresas y equipos, contribuyendo al desarrollo de soluciones de software que impulsan el crecimiento y la innovación empresarial.",
+      "jobs": {
+        "softwareEngineer": {
+          "description1": "Ingeniero de software experimentado experto en el desarrollo de soluciones innovadoras en diversos dominios, incluidos CMS, aplicaciones full-stack, desarrollo web, computación en la nube e IA. Con una sólida base en resolución de problemas y colaboración, entrego productos de alta calidad a tiempo y dentro del presupuesto. Trabajé con tecnologías que puedes encontrar en mi de sección de",
+          "description2": "habilidades",
+          "description3": "."
+        },
+        "techLead": {
+          "description": "Tech Lead experimentado especializado en guiar equipos, impulsar la excelencia técnica y lograr resultados exitosos. Especializado en gestión de proyectos, diseño de arquitectura e implementación de tecnología, fomento la colaboración y la innovación para lograr los objetivos organizacionales."
+        },
+        "engineeringManager": {
+          "description": "Gerente de Ingeniería experimentado experto en liderar y desarrollar equipos de alto rendimiento para ofrecer soluciones innovadoras. Con un enfoque en la planificación estratégica, el desarrollo de talento y la ejecución de proyectos, fomento una cultura de colaboración y excelencia. Al alinear los esfuerzos del equipo con los objetivos organizacionales, impulso el éxito e inspiro el crecimiento en entornos de ingeniería dinámicos."
+        },
+        "supportHero": {
+          "description": "Proporcioné soporte por correo electrónico para Duet Display, una aplicación de uso compartido de pantalla multiplataforma para Apple, Windows y Android. Brindé asistencia de primer nivel, resolviendo consultas y problemas para garantizar experiencias de usuario excepcionales."
+        },
+        "itSupport": {
+          "description": "Como parte de mi programa de becas universitarias, me desempeñé como Especialista en Soporte de TI, brindando asistencia técnica exclusivamente a los miembros del personal universitario. En este rol, diagnosticaba y resolvía problemas de hardware y software, configuraba sistemas informáticos y aseguraba el funcionamiento fluido de la infraestructura de TI. Además, asistí con la resolución de problemas de red, documenté tickets de soporte y contribuí a mejorar la eficiencia de la experiencia tecnológica de los miembros del personal universitario."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explora mi portafolio que muestra proyectos innovadores que reflejan mi experiencia, creatividad y dedicación a la excelencia. Cada proyecto demuestra mi capacidad para abordar desafíos y ofrecer soluciones impactantes.",
+      "projects": {
+        "anotherBlogApp": {
+          "title": "Another Blog App",
+          "description": "Una simple aplicación de blogs construida con Next.js y Tailwind CSS."
+        }
+      }
+    },
+    "education": {
+      "title": "Educación",
+      "description": "Explora mi formación académica, que respalda mi experiencia en Ingeniería. He realizado estudios en diversas instituciones, perfeccionando mis habilidades y conocimientos en los diversos ámbitos de la ingeniería. Mi trayectoria educativa refleja mi compromiso con el aprendizaje continuo y el crecimiento.",
+      "viewCertification": "Ver Certificación",
+      "academic": "Académico",
+      "courses": "Cursos",
+      "degrees": {
+        "college": {
+          "title": "Ingeniería en Mecatrónica",
+          "description": "En este programa, aprendí sobre la integración de ingeniería mecánica, eléctrica e informática para crear sistemas inteligentes. También aprendí sobre robótica, automatización y sistemas de control."
+        },
+        "highSchool": {
+          "title": "Diploma de escuela secundaria",
+          "description": "Durante mi tiempo en la escuela secundaria, aprendí sobre los conceptos básicos de ciencia, matemáticas y literatura. Tuve la oportunidad de participar y ganar en múltiples concursos de matemáticas y ajedrez."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "description": "Lee lo que mis clientes y colegas tienen que decir sobre trabajar conmigo. Sus testimonios destacan mi profesionalismo, experiencia y compromiso con la entrega de trabajos de alta calidad. Me enorgullece construir relaciones sólidas y superar las expectativas."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Descubre mis habilidades técnicas y blandas, que me permiten destacar en mi trabajo. He desarrollado un conjunto de habilidades diverso que abarca varios lenguajes de programación, herramientas y metodologías. Mis habilidades me permiten abordar desafíos complejos y ofrecer soluciones innovadoras."
+    }
+  }
+}

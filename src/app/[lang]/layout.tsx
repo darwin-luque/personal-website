@@ -1,7 +1,8 @@
-import { LanguageProvider } from "@inlang/paraglide-next";
-import { type AvailableLanguageTag, languageTag } from "@/paraglide/runtime.js";
-import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import type { PropsWithChildren } from "react";
+import { getDictionary } from "@/lib/dictionaries";
+import type { ParamsWithLang } from "@/lib/types";
 import { ThemeProvider } from "@/providers/theme";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/navbar";
@@ -93,44 +94,34 @@ export const viewport = {
   ],
 } satisfies Viewport;
 
-const direction: Record<AvailableLanguageTag, "ltr" | "rtl"> = {
-  en: "ltr",
-  es: "ltr",
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  params: { lang },
+}: PropsWithChildren<{ params: ParamsWithLang }>) {
+  const dict = await getDictionary(lang);
+
   return (
-    <LanguageProvider>
-      <html
-        lang={languageTag()}
-        dir={direction[languageTag()]}
-        suppressHydrationWarning
+    <html lang={lang} suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable,
+        )}
       >
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            inter.variable,
-          )}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-            <Toaster />
-          </ThemeProvider>
-        </body>
-      </html>
-    </LanguageProvider>
+          <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
+            <Navbar lang={lang} dict={dict} />
+            {children}
+            <Footer />
+          </div>
+          <Toaster />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

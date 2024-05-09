@@ -1,20 +1,10 @@
-import { paraglide } from "@inlang/paraglide-next/plugin";
-
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = paraglide({
-  paraglide: {
-    project: "./project.inlang",
-    outdir: "./src/paraglide"
-  },
+const config = {
   i18n: {
-    locales: ["en", "es"],
     defaultLocale: "en",
+    locales: ["en", "es"],
   },
   images: {
     remotePatterns: [
@@ -57,6 +47,6 @@ const config = paraglide({
     ],
     dangerouslyAllowSVG: true,
   },
-});
+};
 
 export default config;

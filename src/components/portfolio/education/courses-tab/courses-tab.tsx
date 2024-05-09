@@ -1,12 +1,12 @@
 import type { FC } from "react";
+import type { PropsWithDictionary } from "@/lib/types";
 import {
   Card,
+  CardTitle,
+  CardHeader,
   CardContent,
   CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
-import { viewCertification } from "@/paraglide/messages";
 
 type Course = {
   id: number;
@@ -138,27 +138,25 @@ const courses = [
   },
 ] satisfies Course[];
 
-export const CoursesTab: FC = () => {
-  return (
-    <div className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2 lg:grid-cols-3">
-      {courses.map((course) => (
-        <Card key={course.id}>
-          <CardHeader>
-            <CardTitle>{course.title}</CardTitle>
-            <CardDescription>{course.platform}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <a
-              href={course.certificationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              {viewCertification()}
-            </a>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-};
+export const CoursesTab: FC<PropsWithDictionary> = ({ dict }) => (
+  <div className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2 lg:grid-cols-3">
+    {courses.map((course) => (
+      <Card key={course.id}>
+        <CardHeader>
+          <CardTitle>{course.title}</CardTitle>
+          <CardDescription>{course.platform}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <a
+            href={course.certificationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            {dict.portfolio.education.viewCertification}
+          </a>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+);

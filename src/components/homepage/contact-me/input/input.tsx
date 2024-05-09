@@ -2,11 +2,12 @@
 
 import { z } from "zod";
 import type { FC } from "react";
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { useRouter } from "@/lib/i18n";
 import { ChevronRight } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -14,7 +15,6 @@ import {
   FormItem,
   FormLabel,
 } from "@/components/ui/form";
-import { Input } from "../../../ui/input";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -27,7 +27,7 @@ export const ContactMeInput: FC = () => {
   const router = useRouter();
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    router.push("/contact-me?email=" + values.email);
+    void router.push("/contact-me?email=" + values.email);
   }
 
   return (
@@ -44,9 +44,9 @@ export const ContactMeInput: FC = () => {
               <FormLabel htmlFor="email" className="sr-only">
                 Contact me
               </FormLabel>
-              <FormControl className="p-0 m-0">
+              <FormControl className="m-0 p-0">
                 <Input
-                  className="h-full m-0 py-0 pl-2 border-none"
+                  className="m-0 h-full border-none py-0 pl-2"
                   placeholder="darwin.luque.98@gmail.com"
                   {...field}
                 />

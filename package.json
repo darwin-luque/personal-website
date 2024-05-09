@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@formatjs/intl-localematcher": "^0.5.4",
     "@hookform/resolvers": "^3.3.4",
-    "@inlang/paraglide-next": "0.1.7",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-navigation-menu": "^1.1.4",
@@ -29,6 +29,7 @@
     "lodash": "^4.17.21",
     "lucide": "^0.376.1",
     "lucide-react": "^0.376.0",
+    "negotiator": "^0.6.3",
     "next": "^14.2.1",
     "next-themes": "^0.3.0",
     "react": "18.2.0",
@@ -56,8 +57,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.2",
-    "@inlang/paraglide-js": "1.7.3"
+    "typescript": "^5.4.2"
   },
   "ct3aMetadata": {
     "initVersion": "7.32.0"

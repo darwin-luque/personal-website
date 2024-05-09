@@ -4,34 +4,26 @@ import {
   DraftingCompass,
   ChevronRightIcon,
 } from "lucide-react";
-import {
-  humble,
-  mastery,
-  helpOthers,
-  aboutMeWelcome,
-  seeMyCoreValues,
-  humbleDescription,
-  masteryDescription,
-  aboutMeDescription,
-  helpOthersDescription,
-} from "@/paraglide/messages";
+import type { FC } from "react";
+import type { PropsWithDictionary } from "@/lib/types";
 
-export const AboutMe = () => {
+export const AboutMe: FC<PropsWithDictionary> = ({ dict }) => {
   return (
     <div className="container py-12 lg:py-16">
       <div className="grid gap-12 md:grid-cols-2">
         <div className="lg:w-3/4">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-            {aboutMeWelcome()}
+            {dict.aboutMe.welcome}
           </h2>
           <p className="mt-3 text-muted-foreground">
-            {aboutMeDescription({
-              plusYears: new Date().getFullYear() - 2021,
-            })}
+            {dict.aboutMe.description.replace(
+              "plusYears",
+              (new Date().getFullYear() - 2021).toString(),
+            )}
           </p>
           <p className="mt-5">
             <span className="group inline-flex items-center gap-x-1 font-medium underline-offset-4">
-              {seeMyCoreValues()}
+              {dict.aboutMe.seeMyCoreValues}
               <ChevronRightIcon className="h-4 w-4 flex-shrink-0 transition ease-in-out group-hover:translate-x-1" />
             </span>
           </p>
@@ -42,9 +34,11 @@ export const AboutMe = () => {
               <HeartHandshake className="h-5 w-5 flex-shrink-0" />
             </span>
             <div className="ms-5 sm:ms-8">
-              <h3 className="text-base font-semibold sm:text-lg">{humble()}</h3>
+              <h3 className="text-base font-semibold sm:text-lg">
+                {dict.aboutMe.humble.title}
+              </h3>
               <p className="mt-1 text-muted-foreground">
-                {humbleDescription()}
+                {dict.aboutMe.humble.description}
               </p>
             </div>
           </div>
@@ -54,10 +48,10 @@ export const AboutMe = () => {
             </span>
             <div className="ms-5 sm:ms-8">
               <h3 className="text-base font-semibold sm:text-lg">
-                {helpOthers()}
+                {dict.aboutMe.helpOthers.title}
               </h3>
               <p className="mt-1 text-muted-foreground">
-                {helpOthersDescription()}
+                {dict.aboutMe.helpOthers.description}
               </p>
             </div>
           </div>
@@ -67,10 +61,10 @@ export const AboutMe = () => {
             </span>
             <div className="ms-5 sm:ms-8">
               <h3 className="text-base font-semibold sm:text-lg">
-                {mastery()}
+                {dict.aboutMe.mastery.title}
               </h3>
               <p className="mt-1 text-muted-foreground">
-                {masteryDescription()}
+                {dict.aboutMe.mastery.description}
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import { Link } from "@/lib/i18n";
+import Link from "next/link";
 
 export const Footer = () => {
   return (

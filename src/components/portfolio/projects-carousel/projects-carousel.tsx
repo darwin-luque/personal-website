@@ -14,26 +14,25 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import Image from "next/image";
-import {
-  anotherBlogApp,
-  anotherBlogAppDescription,
-} from "@/paraglide/messages";
+import type { PropsWithDictionary } from "@/lib/types";
 
-const projects = [
+const getProjects = (
+  projectsDict: PropsWithDictionary["dict"]["portfolio"]["projects"]["projects"],
+) => [
   {
     id: "another-blog-app",
-    title: anotherBlogApp(),
-    description: anotherBlogAppDescription(),
+    title: projectsDict.anotherBlogApp.title,
+    description: projectsDict.anotherBlogApp.description,
     previewImage: "/blog-app-preview.png",
     alt: "Preview Screenshot of another-blog-app.vercel.app",
     url: "https://another-blog-app.vercel.app/",
   },
 ];
 
-export const ProjectsCarousel: FC = () => (
+export const ProjectsCarousel: FC<PropsWithDictionary> = ({ dict }) => (
   <Carousel className="w-full">
     <CarouselContent>
-      {projects.map((project) => (
+      {getProjects(dict.portfolio.projects.projects).map((project) => (
         <CarouselItem key={project.id}>
           <div className="p-1">
             <Card>

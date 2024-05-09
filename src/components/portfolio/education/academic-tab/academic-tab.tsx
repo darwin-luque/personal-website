@@ -6,52 +6,47 @@ import {
   CardContent,
   CardDescription,
 } from "@/components/ui/card";
-import {
-  collegeDegree,
-  highSchoolDegree,
-  collegeDescription,
-  highSchoolDescription,
-} from "@/paraglide/messages";
+import type { PropsWithDictionary } from "@/lib/types";
 
-const academics = [
+const getAcademics = (
+  degreesDict: PropsWithDictionary["dict"]["portfolio"]["education"]["degrees"],
+) => [
   {
     id: 1,
     institution: "Universidad Tecnológica Centroamericana (UNITEC)",
-    degree: collegeDegree(),
+    degree: degreesDict.college.title,
     duration: "2015 - 2020",
     location: "San Pedro Sula, Honduras",
-    description: collegeDescription(),
+    description: degreesDict.college.description,
   },
   {
     id: 2,
     institution: "Instituto Morazanni",
-    degree: highSchoolDegree(),
+    degree: degreesDict.highSchool.title,
     duration: "2011 - 2015",
     location: "San Pedro Sula, Honduras",
-    description: highSchoolDescription(),
+    description: degreesDict.highSchool.description,
   },
 ];
 
-export const AcademicTab: FC = () => {
-  return (
-    <div className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2">
-      {academics.map((academic) => (
-        <Card key={academic.id}>
-          <CardHeader>
-            <CardTitle>{academic.degree}</CardTitle>
-            <CardDescription>{academic.institution}</CardDescription>
-            <CardDescription>{academic.duration}</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-              {academic.description}
-            </p>
-            <address className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-              {academic.location}
-            </address>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-};
+export const AcademicTab: FC<PropsWithDictionary> = ({ dict }) => (
+  <div className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2">
+    {getAcademics(dict.portfolio.education.degrees).map((academic) => (
+      <Card key={academic.id}>
+        <CardHeader>
+          <CardTitle>{academic.degree}</CardTitle>
+          <CardDescription>{academic.institution}</CardDescription>
+          <CardDescription>{academic.duration}</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            {academic.description}
+          </p>
+          <address className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            {academic.location}
+          </address>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+);
