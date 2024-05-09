@@ -49,6 +49,7 @@ async function scrapeYearLinks(username: string, query: ParsedQuery) {
         referer: `https://github.com/${username}`,
         'x-requested-with': 'XMLHttpRequest',
       },
+      cache: 'no-store',
     },
   );
   const $ = load(await page.text());
