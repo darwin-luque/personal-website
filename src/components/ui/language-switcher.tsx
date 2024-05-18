@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuRadioGroup,
 } from "@/components/ui/dropdown-menu";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 type LanguageSwitcherProps = {
@@ -18,6 +18,7 @@ type LanguageSwitcherProps = {
 };
 
 export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
+  const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
   const t = useTranslations("navbar.language");
@@ -37,10 +38,19 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
     [t],
   );
 
-  const parsedPathname = useMemo(() => {
-    // remove locale from pathname
-    return pathname.replace(lang, "");
-  }, [pathname, lang]);
+  const changeLanguage = (lang: string) => {
+    const locale = lang === "en" ? "en" : "es";
+    const search = searchParams.toString();
+    console.log({ search });
+    const newPathname =
+      pathname.replace(/^\/(en|es)/, `/${locale}`) +
+      window.location.hash +
+      (search ? `?${search}` : "");
+
+    router.push(newPathname, {
+      scroll: true,
+    });
+  };
 
   return (
     <DropdownMenu>
@@ -51,10 +61,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup
-          value={lang}
-          onValueChange={(lang) => router.push(`${lang}/${parsedPathname}`)}
-        >
+        <DropdownMenuRadioGroup value={lang} onValueChange={changeLanguage}>
           {langs.map((lang) => (
             <DropdownMenuRadioItem key={lang.value} value={lang.value}>
               {lang.label}

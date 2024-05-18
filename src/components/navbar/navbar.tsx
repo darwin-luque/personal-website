@@ -1,10 +1,12 @@
 "use client";
 
-import { type FC } from "react";
+import { useTranslations } from "next-intl";
 import { Cpu } from "lucide-react";
-import { LanguageSwitcher } from "@/components/ui/language-switcher";
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { type FC } from "react";
+import { Link } from "@/lib/intl";
 import { ListItem } from "./list-item";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -14,8 +16,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
 
 const portfolioItems = (
   t: ReturnType<typeof useTranslations<string>>,

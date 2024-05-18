@@ -1,5 +1,4 @@
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -11,38 +10,38 @@ export const Footer = () => {
           </p>
         </div>
         <div className="flex items-center justify-center space-x-4">
-          <Link
+          <a
             className="text-foreground transition-colors"
             href="https://github.com/darwin-luque"
             target="_blank"
           >
             <Github className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
-          </Link>
-          <Link
+          </a>
+          <a
             className="text-foreground transition-colors"
             href="https://www.linkedin.com/in/darwin-luque"
             target="_blank"
           >
             <Linkedin className="h-6 w-6" />
-            <span className="sr-only">Linkedin</span>
-          </Link>
-          <Link
+            <span className="sr-only">aedin</span>
+          </a>
+          <a
             className="text-foreground transition-colors"
             href="https://twitter.com/dluque_98"
             target="_blank"
           >
             <Twitter className="h-6 w-6" />
             <span className="sr-only">Twitter</span>
-          </Link>
-          <Link
+          </a>
+          <a
             className="text-foreground transition-colors"
             href="https://www.instagram.com/darwin.vlm"
             target="_blank"
           >
             <Instagram className="h-6 w-6" />
             <span className="sr-only">Instagram</span>
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Fragment, type FC } from "react";
-import { ContactRound } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ContactRound } from "lucide-react";
+import { Fragment, type FC } from "react";
+import Image from "next/image";
+import { Link } from "@/lib/intl";
 import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const companies = [
   {

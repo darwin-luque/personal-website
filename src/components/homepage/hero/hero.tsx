@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { type FC, Suspense } from "react";
 import { Github } from "lucide-react";
+import { type FC, Suspense } from "react";
+import { useTranslations } from "next-intl";
 import { HeroGithubStats } from "./github-stats";
 import { buttonVariants } from "@/components/ui/button";
 import { HeroGithubStatsLoader } from "./github-stats/loader";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/lib/intl";
 
 export const Hero: FC = () => {
   const t = useTranslations("hero");
