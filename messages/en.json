@@ -116,15 +116,13 @@
       "description": "Explore my professional experience, including my roles, responsibilities, and achievements. I&apos;ve worked with various companies and teams, contributing to the development of software solutions that drive business growth and innovation.",
       "jobs": {
         "softwareEngineer": {
-          "description1": "Experienced software engineer adept in developing innovative solutions across various domains, including CMS, full-stack applications, web development, cloud computing, and AI. With a strong foundation in problem-solving and collaboration, I deliver high-quality products on time and within budget. Worked with technologies you can find in my",
-          "description2": "skills",
-          "description3": "section."
+          "description": "Collaborated with project managers to define ambitious yet achievable coding milestones for pre-release software projects, revised, modularized, and updated legacy code bases to meet modern development standards, and contributed to the successful completion of multiple projects for high-profile clients such as Wendy's and Takeda."
         },
         "techLead": {
-          "description": "Experienced Tech Lead skilled in guiding teams, driving technical excellence, and delivering successful outcomes. Specializing in project management, architecture design, and technology implementation, I foster collaboration and innovation to achieve organizational objectives."
+          "description": "Led a team of software engineers, provided technical guidance, directed the architecture and design of software projects, and collaborated with international clients, including Simera, and Stellantis, to understand their needs and deliver technical solutions."
         },
         "engineeringManager": {
-          "description": "Experienced Engineering Manager adept at leading and developing high-performing teams to deliver innovative solutions. With a focus on strategic planning, talent development, and project execution, I foster a culture of collaboration and excellence. By aligning team efforts with organizational goals, I drive success and inspire growth in dynamic engineering environments."
+          "description": "Directly guided software developers in their careers, monitored their performance, mentored and developed engineering talent, streamlined development processes, and managed the successful delivery of software projects for diverse international clients, ensuring high standards of quality and client satisfaction."
         },
         "supportHero": {
           "description": "Provided prompt email support for Duet Display, a multi-platform display sharing app for Apple, Windows, and Android. Delivered top-tier assistance, resolving inquiries and issues to ensure exceptional user experiences."

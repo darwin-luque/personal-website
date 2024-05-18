@@ -117,15 +117,13 @@
       "description": "Explora mi experiencia profesional, incluidos mis roles, responsabilidades y logros. He trabajado con diversas empresas y equipos, contribuyendo al desarrollo de soluciones de software que impulsan el crecimiento y la innovación empresarial.",
       "jobs": {
         "softwareEngineer": {
-          "description1": "Ingeniero de software experimentado experto en el desarrollo de soluciones innovadoras en diversos dominios, incluidos CMS, aplicaciones full-stack, desarrollo web, computación en la nube e IA. Con una sólida base en resolución de problemas y colaboración, entrego productos de alta calidad a tiempo y dentro del presupuesto. Trabajé con tecnologías que puedes encontrar en mi de sección de",
-          "description2": "habilidades",
-          "description3": "."
+          "description": "Colaboré con gestores de proyecto para definir hitos de codificación ambiciosos pero alcanzables para proyectos de software en pre-lanzamiento, revisé, modularicé y actualicé bases de código heredadas para cumplir con los estándares de desarrollo modernos, y contribuí a la finalización exitosa de múltiples proyectos para clientes destacados como Wendy's y Takeda."
         },
         "techLead": {
-          "description": "Tech Lead experimentado especializado en guiar equipos, impulsar la excelencia técnica y lograr resultados exitosos. Especializado en gestión de proyectos, diseño de arquitectura e implementación de tecnología, fomento la colaboración y la innovación para lograr los objetivos organizacionales."
+          "description": "Dirigí un equipo de ingenieros de software, proporcioné orientación técnica, dirigí la arquitectura y el diseño de proyectos de software, y colaboré con clientes internacionales, incluyendo Wendy's, Simera y Stellantis, para comprender sus necesidades y ofrecer soluciones técnicas."
         },
         "engineeringManager": {
-          "description": "Gerente de Ingeniería experimentado experto en liderar y desarrollar equipos de alto rendimiento para ofrecer soluciones innovadoras. Con un enfoque en la planificación estratégica, el desarrollo de talento y la ejecución de proyectos, fomento una cultura de colaboración y excelencia. Al alinear los esfuerzos del equipo con los objetivos organizacionales, impulso el éxito e inspiro el crecimiento en entornos de ingeniería dinámicos."
+          "description": "Guié directamente a los desarrolladores de software en sus carreras, monitoreé su desempeño, mentoreé y desarrollé el talento de ingeniería, optimicé los procesos de desarrollo y gestioné la entrega exitosa de proyectos de software para diversos clientes internacionales, asegurando altos estándares de calidad y satisfacción del cliente."
         },
         "supportHero": {
           "description": "Proporcioné soporte por correo electrónico para Duet Display, una aplicación de uso compartido de pantalla multiplataforma para Apple, Windows y Android. Brindé asistencia de primer nivel, resolviendo consultas y problemas para garantizar experiencias de usuario excepcionales."

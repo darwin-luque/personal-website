@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { ContactRound } from "lucide-react";
 import { Fragment, type FC } from "react";
 import Image from "next/image";
-import { Link } from "@/lib/intl";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -32,18 +31,7 @@ export const getJobs = (t: ReturnType<typeof useTranslations<string>>) => [
     location: "San Pedro Sula, Honduras",
     startDate: new Date("2021-02-01"),
     endDate: new Date("2022-04-15"),
-    description: (
-      <p>
-        {t("jobs.softwareEngineer.description1")}{" "}
-        <Link
-          className="inline items-center text-blue-700 hover:underline dark:text-blue-500"
-          href="/portfolio#skills"
-        >
-          {t("jobs.softwareEngineer.description2")}
-        </Link>{" "}
-        {t("jobs.softwareEngineer.description3")}
-      </p>
-    ),
+    description: <p>{t("jobs.softwareEngineer.description")}</p>,
   },
   {
     id: 2,
