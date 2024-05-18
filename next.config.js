@@ -44,6 +44,12 @@ const config = {
         port: "",
         pathname: "/favicon/**",
       },
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+        port: "",
+        pathname: "/**",
+      }
     ],
     dangerouslyAllowSVG: true,
   },

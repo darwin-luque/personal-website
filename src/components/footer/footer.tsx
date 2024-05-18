@@ -8,6 +8,16 @@ export const Footer = () => {
           <p className="text-sm">
             © {new Date().getFullYear()} Darwin Luque. All rights reserved.
           </p>
+          <p className="text-xs text-muted-foreground">
+            Download my resume{" "}
+            <a
+              className="font-bold"
+              href="https://utfs.io/f/cf333d0b-71b9-46f1-b1f5-0b5ca20eb1a5-td3bos.pdf"
+              download
+            >
+              here
+            </a>
+          </p>
         </div>
         <div className="flex items-center justify-center space-x-4">
           <a

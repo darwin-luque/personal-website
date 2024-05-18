@@ -44,8 +44,8 @@ export const Hero: FC = () => {
         </div>
         <div className="relative ms-4">
           <Image
-            className="w-full rounded-md"
-            src="https://placehold.co/800x700"
+            className="aspect-[8/7] w-full rounded-md object-cover"
+            src="https://utfs.io/f/4c8e4617-5fad-4174-9d8e-17452936e1dd-7c7qyo.jpeg"
             alt="Image Description"
             width={800}
             height={700}
