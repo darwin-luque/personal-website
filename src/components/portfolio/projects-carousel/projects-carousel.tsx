@@ -1,4 +1,6 @@
+import { useTranslations } from "next-intl";
 import type { FC } from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -13,15 +15,14 @@ import {
   CardContent,
   CardDescription,
 } from "@/components/ui/card";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
 
 const getProjects = (t: ReturnType<typeof useTranslations<string>>) => [
   {
     id: "another-blog-app",
     title: t("projects.anotherBlogApp.title"),
     description: t("projects.anotherBlogApp.description"),
-    previewImage: "/blog-app-preview.png",
+    previewImage:
+      "https://utfs.io/f/eacd27ba-01eb-4c48-b3fe-7e2bc4e364bd-ab0ccv.png",
     alt: "Preview Screenshot of another-blog-app.vercel.app",
     url: "https://another-blog-app.vercel.app/",
   },
