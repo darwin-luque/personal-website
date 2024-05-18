@@ -1,11 +1,11 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
 await import("./src/env.js");
+
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import("next").NextConfig} */
 const config = {
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "es"],
-  },
   images: {
     remotePatterns: [
       {
@@ -49,4 +49,4 @@ const config = {
   },
 };
 
-export default config;
+export default withNextIntl(config);

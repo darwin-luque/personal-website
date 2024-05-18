@@ -1,10 +1,10 @@
-import { ContactRound } from "lucide-react";
-import { Fragment, type FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Fragment, type FC } from "react";
+import { ContactRound } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import type { PropsWithDictionary } from "@/lib/types";
-import Link from "next/link";
 
 export const companies = [
   {
@@ -24,9 +24,7 @@ export const companies = [
   },
 ];
 
-export const getJobs = (
-  jobsDict: PropsWithDictionary["dict"]["portfolio"]["experience"]["jobs"],
-) => [
+export const getJobs = (t: ReturnType<typeof useTranslations<string>>) => [
   {
     id: 1,
     title: "Software Engineer",
@@ -36,14 +34,14 @@ export const getJobs = (
     endDate: new Date("2022-04-15"),
     description: (
       <p>
-        {jobsDict.softwareEngineer.description1}{" "}
+        {t("jobs.softwareEngineer.description1")}{" "}
         <Link
           className="inline items-center text-blue-700 hover:underline dark:text-blue-500"
           href="/portfolio#skills"
         >
-          {jobsDict.softwareEngineer.description2}
+          {t("jobs.softwareEngineer.description2")}
         </Link>{" "}
-        {jobsDict.softwareEngineer.description3}
+        {t("jobs.softwareEngineer.description3")}
       </p>
     ),
   },
@@ -54,7 +52,7 @@ export const getJobs = (
     location: "San Pedro Sula, Honduras",
     startDate: new Date("2022-04-15"),
     endDate: new Date("2023-05-15"),
-    description: <p>{jobsDict.techLead.description}</p>,
+    description: <p>{t("jobs.techLead.description")}</p>,
   },
   {
     id: 3,
@@ -62,7 +60,7 @@ export const getJobs = (
     companyId: 1,
     location: "San Pedro Sula, Honduras",
     startDate: new Date("2023-05-15"),
-    description: <p>{jobsDict.engineeringManager.description}</p>,
+    description: <p>{t("jobs.engineeringManager.description")}</p>,
   },
   {
     id: 4,
@@ -71,7 +69,7 @@ export const getJobs = (
     location: "Remote",
     startDate: new Date("2020-10-15"),
     endDate: new Date("2021-01-31"),
-    description: <p>{jobsDict.supportHero.description}</p>,
+    description: <p>{t("jobs.supportHero.description")}</p>,
   },
   {
     id: 5,
@@ -80,7 +78,7 @@ export const getJobs = (
     location: "San Pedro Sula, Honduras",
     startDate: new Date("2018-01-15"),
     endDate: new Date("2020-01-31"),
-    description: <p>{jobsDict.itSupport.description}</p>,
+    description: <p>{t("jobs.itSupport.description")}</p>,
   },
 ];
 
@@ -91,19 +89,17 @@ type ParsedJob = {
   positions: Job[];
 };
 
-export const WorkExperience: FC<PropsWithDictionary> = ({ dict }) => {
-  const parsedJobs = getJobs(dict.portfolio.experience.jobs).reduce(
-    (acc, job) => {
-      const existingJob = acc.find((j) => j.companyId === job.companyId);
-      if (existingJob) {
-        existingJob.positions.push(job);
-      } else {
-        acc.push({ companyId: job.companyId, positions: [job] });
-      }
-      return acc;
-    },
-    [] as ParsedJob[],
-  );
+export const WorkExperience: FC = () => {
+  const t = useTranslations("portfolio.experience");
+  const parsedJobs = getJobs(t).reduce((acc, job) => {
+    const existingJob = acc.find((j) => j.companyId === job.companyId);
+    if (existingJob) {
+      existingJob.positions.push(job);
+    } else {
+      acc.push({ companyId: job.companyId, positions: [job] });
+    }
+    return acc;
+  }, [] as ParsedJob[]);
 
   return (
     <div className="flex w-full flex-col justify-center gap-4">

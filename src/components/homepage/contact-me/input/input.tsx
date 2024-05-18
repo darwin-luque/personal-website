@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 import type { FC } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { ChevronRight } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -5,25 +5,26 @@ import {
   ChevronRightIcon,
 } from "lucide-react";
 import type { FC } from "react";
-import type { PropsWithDictionary } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
-export const AboutMe: FC<PropsWithDictionary> = ({ dict }) => {
+export const AboutMe: FC = () => {
+  const t = useTranslations("aboutMe");
+
   return (
     <div className="container py-12 lg:py-16">
       <div className="grid gap-12 md:grid-cols-2">
         <div className="lg:w-3/4">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-            {dict.aboutMe.welcome}
+            {t("welcome")}
           </h2>
           <p className="mt-3 text-muted-foreground">
-            {dict.aboutMe.description.replace(
-              "plusYears",
-              (new Date().getFullYear() - 2021).toString(),
-            )}
+            {t("description", {
+              plusYears: (new Date().getFullYear() - 2021).toString(),
+            })}
           </p>
           <p className="mt-5">
             <span className="group inline-flex items-center gap-x-1 font-medium underline-offset-4">
-              {dict.aboutMe.seeMyCoreValues}
+              {t("seeMyCoreValues")}
               <ChevronRightIcon className="h-4 w-4 flex-shrink-0 transition ease-in-out group-hover:translate-x-1" />
             </span>
           </p>
@@ -35,10 +36,10 @@ export const AboutMe: FC<PropsWithDictionary> = ({ dict }) => {
             </span>
             <div className="ms-5 sm:ms-8">
               <h3 className="text-base font-semibold sm:text-lg">
-                {dict.aboutMe.humble.title}
+                {t("humble.title")}
               </h3>
               <p className="mt-1 text-muted-foreground">
-                {dict.aboutMe.humble.description}
+                {t("humble.description")}
               </p>
             </div>
           </div>
@@ -48,10 +49,10 @@ export const AboutMe: FC<PropsWithDictionary> = ({ dict }) => {
             </span>
             <div className="ms-5 sm:ms-8">
               <h3 className="text-base font-semibold sm:text-lg">
-                {dict.aboutMe.helpOthers.title}
+                {t("helpOthers.title")}
               </h3>
               <p className="mt-1 text-muted-foreground">
-                {dict.aboutMe.helpOthers.description}
+                {t("helpOthers.description")}
               </p>
             </div>
           </div>
@@ -61,10 +62,10 @@ export const AboutMe: FC<PropsWithDictionary> = ({ dict }) => {
             </span>
             <div className="ms-5 sm:ms-8">
               <h3 className="text-base font-semibold sm:text-lg">
-                {dict.aboutMe.mastery.title}
+                {t("mastery.title")}
               </h3>
               <p className="mt-1 text-muted-foreground">
-                {dict.aboutMe.mastery.description}
+                {t("mastery.description")}
               </p>
             </div>
           </div>

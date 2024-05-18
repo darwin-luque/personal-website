@@ -4,13 +4,13 @@
     "title": "Darwin Luque: Ingeniero de Software",
     "description": "Soy un ingeniero de software con pasión por construir soluciones de software escalables. Trabajo con una variedad de tecnologías para crear soluciones de software que sean rápidas, seguras y fáciles de usar.",
     "contactMe": "Contáctame",
-    "currentYear": "Año actual",
-    "pastFourYears": "Últimos 4 años",
-    "notThatBad": "No tan mal para ser honesto"
-  },
-  "github": {
-    "contributions": "Contribuciones de Github",
-    "statsComparison": "{percent}% del año pasado"
+    "github": {
+      "contributions": "Contribuciones de Github",
+      "statsComparison": "{percent}% del año pasado",
+      "currentYear": "Año actual",
+      "pastFourYears": "Últimos 4 años",
+      "notThatBad": "No tan mal para ser honesto"
+    }
   },
   "aboutMe": {
     "title": "Sobre mí",

@@ -4,13 +4,13 @@
     "title": "Darwin Luque: Software Engineer",
     "description": "I am a software engineer with a passion for building scalable software solutions. I work with a variety of technologies to create software solution that are fast, secure, and easy to use.",
     "contactMe": "Contact me",
-    "currentYear": "Current Year",
-    "pastFourYears": "Past 4 years",
-    "notThatBad": "Not that bad tbh"
-  },
-  "github": {
-    "contributions": "Github Contributions",
-    "statsComparison": "{percent}% from last year"
+    "github": {
+      "contributions": "Github Contributions",
+      "statsComparison": "{percent}% from last year",
+      "currentYear": "Current Year",
+      "pastFourYears": "Past 4 years",
+      "notThatBad": "Not that bad tbh"
+    }
   },
   "aboutMe": {
     "title": "About Me",

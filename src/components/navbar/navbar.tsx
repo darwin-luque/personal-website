@@ -14,125 +14,130 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import type { ParamsWithLang, PropsWithDictionary } from "@/lib/types";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const portfolioItems = (
-  portfolioDict: PropsWithDictionary["dict"]["navbar"]["portfolio"],
+  t: ReturnType<typeof useTranslations<string>>,
 ): { title: string; href: string; description: string }[] => [
   {
-    title: portfolioDict.experience.title,
+    title: t("portfolio.experience.title"),
     href: "/portfolio#experience",
-    description: portfolioDict.experience.description,
+    description: t("portfolio.experience.description"),
   },
   {
-    title: portfolioDict.projects.title,
+    title: t("portfolio.projects.title"),
     href: "/portfolio#projects",
-    description: portfolioDict.projects.description,
+    description: t("portfolio.projects.description"),
   },
   {
-    title: portfolioDict.testimonials.title,
-    href: "/portfolio#testimonials",
-    description: portfolioDict.testimonials.description,
+    title: t("portfolio.testimonials.title"),
+    href: "/portfolio#projects",
+    description: t("portfolio.testimonials.description"),
   },
   {
-    title: portfolioDict.education.title,
-    href: "/portfolio#education",
-    description: portfolioDict.education.description,
+    title: t("portfolio.education.title"),
+    href: "/portfolio#projects",
+    description: t("portfolio.education.description"),
   },
   {
-    title: portfolioDict.skills.title,
-    href: "/portfolio#skills",
-    description: portfolioDict.skills.description,
+    title: t("portfolio.skills.title"),
+    href: "/portfolio#projects",
+    description: t("portfolio.skills.description"),
   },
 ];
 
-export const Navbar: FC<PropsWithDictionary<ParamsWithLang>> = ({
-  dict,
-  lang,
-}) => (
-  <div className="sticky top-0 z-50 grid h-16 max-h-max w-full grid-cols-12 items-center bg-background">
-    <Link href="/" className="col-span-4 flex items-center space-x-4 pl-4">
-      <Cpu className="h-6 w-6" />
-      <p className="text-lg font-medium">Darwin Luque</p>
-    </Link>
-    <div className="col-span-6">
-      <NavigationMenu>
-        <NavigationMenuList className="w-full">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              {dict.navbar.aboutMe.title}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      <Cpu className="h-6 w-6" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Darwin Luque
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        {dict.navbar.aboutMe.description}
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem
-                  href="/#introduction"
-                  title={dict.navbar.aboutMe.introduction.title}
-                >
-                  {dict.navbar.aboutMe.introduction.description}
-                </ListItem>
-                <ListItem
-                  href="/#about-me"
-                  title={dict.navbar.aboutMe.aboutMe.title}
-                >
-                  {dict.navbar.aboutMe.aboutMe.description}
-                </ListItem>
-                <ListItem
-                  href="/#contact-me"
-                  title={dict.navbar.aboutMe.contactMe.title}
-                >
-                  {dict.navbar.aboutMe.contactMe.description}
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              {dict.navbar.portfolio.title}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {portfolioItems(dict.navbar.portfolio).map((component) => (
+export type NavbarProps = {
+  lang: "en" | "es";
+};
+
+export const Navbar: FC<NavbarProps> = ({ lang }) => {
+  const t = useTranslations("navbar");
+
+  return (
+    <div className="sticky top-0 z-50 grid h-16 max-h-max w-full grid-cols-12 items-center bg-background">
+      <Link href="/" className="col-span-4 flex items-center space-x-4 pl-4">
+        <Cpu className="h-6 w-6" />
+        <p className="text-lg font-medium">Darwin Luque</p>
+      </Link>
+      <div className="col-span-6">
+        <NavigationMenu>
+          <NavigationMenuList className="w-full">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                {t("aboutMe.title")}
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <a
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/"
+                      >
+                        <Cpu className="h-6 w-6" />
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          Darwin Luque
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          {t("aboutMe.description")}
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
                   <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
+                    href="/#introduction"
+                    title={t("aboutMe.introduction.title")}
                   >
-                    {component.description}
+                    {t("aboutMe.introduction.description")}
                   </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/contact-me" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {dict.navbar.contact.title}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+                  <ListItem
+                    href="/#about-me"
+                    title={t("aboutMe.aboutMe.title")}
+                  >
+                    {t("aboutMe.aboutMe.description")}
+                  </ListItem>
+                  <ListItem
+                    href="/#contact-me"
+                    title={t("aboutMe.contactMe.title")}
+                  >
+                    {t("aboutMe.contactMe.description")}
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                {t("portfolio.title")}
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {portfolioItems(t).map((component) => (
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}
+                    >
+                      {component.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/contact-me" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  {t("contact.title")}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+      <div className="col-span-2 ml-auto flex items-center space-x-4 pr-4">
+        <ModeToggle />
+        <LanguageSwitcher lang={lang} />
+      </div>
     </div>
-    <div className="col-span-2 ml-auto flex items-center space-x-4 pr-4">
-      <ModeToggle dict={dict} />
-      <LanguageSwitcher lang={lang} dict={dict} />
-    </div>
-  </div>
-);
+  );
+};

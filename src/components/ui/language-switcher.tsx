@@ -11,28 +11,30 @@ import {
   DropdownMenuRadioGroup,
 } from "@/components/ui/dropdown-menu";
 import { usePathname, useRouter } from "next/navigation";
-import type { ParamsWithLang, PropsWithDictionary } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
-export const LanguageSwitcher: FC<PropsWithDictionary<ParamsWithLang>> = ({
-  dict,
-  lang,
-}) => {
+type LanguageSwitcherProps = {
+  lang: "en" | "es";
+};
+
+export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ lang }) => {
   const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations("navbar.language");
 
   const langs = useMemo(
     () =>
       [
         {
           value: "en",
-          label: `🇬🇧 ${dict.navbar.language.english}`,
+          label: `🇬🇧 ${t("english")}`,
         },
         {
           value: "es",
-          label: `🇪🇸 ${dict.navbar.language.spanish}`,
+          label: `🇪🇸 ${t("spanish")}`,
         },
       ] as const,
-    [dict.navbar.language.english, dict.navbar.language.spanish],
+    [t],
   );
 
   const parsedPathname = useMemo(() => {
@@ -45,7 +47,7 @@ export const LanguageSwitcher: FC<PropsWithDictionary<ParamsWithLang>> = ({
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
           <Globe className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">{dict.navbar.language.title}</span>
+          <span className="sr-only">{t("title")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

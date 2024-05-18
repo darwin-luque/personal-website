@@ -1,13 +1,6 @@
-import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
-import { cn } from "@/lib/utils";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata = {
   title: "Darwin Luque | Software Developer",
@@ -89,16 +82,5 @@ export const viewport = {
 } satisfies Viewport;
 
 export default function RootLayout({ children }: PropsWithChildren) {
-  return (
-    <html suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-        )}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  return children;
 }
