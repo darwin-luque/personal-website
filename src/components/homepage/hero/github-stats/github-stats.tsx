@@ -31,8 +31,8 @@ export const HeroGithubStats: FC = async () => {
   );
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-      <Card>
+    <div className="grid grid-cols-2 gap-2 md:gap-4 lg:gap-8 xl:grid-cols-3">
+      <Card className="max-w-[250px]">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">
             {t("currentYear")}
@@ -50,7 +50,7 @@ export const HeroGithubStats: FC = async () => {
           </p>
         </CardContent>
       </Card>
-      <Card>
+      <Card className="max-w-[250px]">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">
             {t("pastFourYears")}
