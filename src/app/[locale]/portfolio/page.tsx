@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 const sectionClassName =
-  "mx-auto flex max-w-5xl flex-col gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14";
+  "mx-auto flex max-w-5xl flex-col gap-2 py-6 space-y-4 md:py-10 md:pb-6 lg:py-16 lg:pb-14";
 
 export default function PortfolioPage() {
   const t = useTranslations("portfolio");

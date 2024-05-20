@@ -16,12 +16,12 @@ export const ContactMe: FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="container py-24 lg:py-32">
+      <div className="py-24 md:container lg:py-32">
         <div className="text-center">
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
             {t("letsTalk")}
           </h1>
-          <p className="mt-3 text-xl text-muted-foreground">
+          <p className="mt-3 md:text-lg lg:text-xl text-muted-foreground">
             {t("invitation")}
           </p>
           <div className="relative mx-auto mt-7 max-w-xl sm:mt-12">

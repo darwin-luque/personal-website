@@ -13,7 +13,7 @@ export const Skills: FC = () => (
       return (
         <div
           key={skill.id}
-          className="w-full space-y-1 rounded-lg border border-transparent px-4 py-2 hover:border-foreground"
+          className="w-11/12 md:w-full space-y-1 rounded-lg border border-transparent px-4 py-2 hover:border-foreground"
         >
           <div className="flex items-center">
             <div className="mr-2">{skill.icon}</div>

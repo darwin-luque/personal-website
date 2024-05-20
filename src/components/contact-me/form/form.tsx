@@ -72,7 +72,7 @@ export const ContactMeForm: FC = () => {
   });
 
   return (
-    <Card className="w-full max-w-4xl space-y-8">
+    <Card className="w-11/12 max-w-4xl space-y-8">
       <Form {...form}>
         <form onSubmit={onSubmit}>
           <CardHeader>
