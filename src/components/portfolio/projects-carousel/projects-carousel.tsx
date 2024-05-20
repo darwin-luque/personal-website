@@ -32,7 +32,7 @@ export const ProjectsCarousel: FC = () => {
   const t = useTranslations("portfolio.projects");
 
   return (
-    <Carousel className="w-full">
+    <Carousel className="w-[70%] md:w-full">
       <CarouselContent>
         {getProjects(t).map((project) => (
           <CarouselItem key={project.id}>
