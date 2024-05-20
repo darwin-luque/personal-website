@@ -30,6 +30,39 @@
       "description": "Busco la maestría, dedicándome a la mejora continua, la innovación y la excelencia en mi oficio. Se trata de empujar los límites, perfeccionar habilidades y esforzarse por el más alto nivel de competencia y experiencia."
     }
   },
+  "services": {
+    "title": "Mis servicios",
+    "description": "Ofrezco servicios expertos de frontend, backend y DevOps para satisfacer las necesidades únicas de tu proyecto. Explora a continuación para ver cómo puedo ayudarte a alcanzar tus objetivos.",
+    "features": "Características",
+    "keyTechnologies": "Tecnologías clave",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Creación de interfaces de usuario visualmente impresionantes y altamente interactivas utilizando tecnologías web modernas. Especializado en diseño receptivo, garantizando un rendimiento óptimo en todos los dispositivos.",
+      "features": {
+        "1": "Diseño receptivo",
+        "2": "Compatibilidad entre navegadores",
+        "3": "Optimización del rendimiento"
+      }
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Construcción de aplicaciones robustas y escalables en el lado del servidor. Experiencia en diseño de bases de datos, desarrollo de API y gestión de servidores para garantizar un flujo de datos fluido y seguro.",
+      "features": {
+        "1": "APIs escalables",
+        "2": "Gestión de bases de datos",
+        "3": "Implementación de seguridad"
+      }
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Implementación de canalizaciones de implementación eficientes y automatizadas para optimizar los procesos de desarrollo. Garantizando la alta disponibilidad, escalabilidad y seguridad de tus aplicaciones.",
+      "features": {
+        "1": "Canalizaciones CI/CD",
+        "2": "Infraestructura como código",
+        "3": "Monitoreo y registro"
+      }
+    }
+  },
   "navbar": {
     "aboutMe": {
       "title": "Sobre mí",
@@ -41,6 +74,10 @@
       "aboutMe": {
         "title": "Sobre mí",
         "description": "Un resumen conciso de quién soy, mi formación, habilidades e intereses."
+      },
+      "myServices": {
+        "title": "Mis Servicios",
+        "description": "Una lista de servicios que ofrezco, incluidos servicios de frontend, backend y DevOps."
       },
       "contactMe": {
         "title": "Contáctame",
@@ -85,7 +122,6 @@
       "spanish": "Español"
     }
   },
-
   "contactMe": {
     "letsTalk": "Hablemos",
     "invitation": "Siempre estoy abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente, quieres discutir una posible asociación o simplemente quieres saludar, no dudes en contactarme.",

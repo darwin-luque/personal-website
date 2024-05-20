@@ -122,10 +122,10 @@ export const Navbar: FC<NavbarProps> = ({ lang }) => {
                       {t("aboutMe.aboutMe.description")}
                     </ListItem>
                     <ListItem
-                      href="/#contact-me"
-                      title={t("aboutMe.contactMe.title")}
+                      href="/#services"
+                      title={t("aboutMe.myServices.title")}
                     >
-                      {t("aboutMe.contactMe.description")}
+                      {t("aboutMe.myServices.description")}
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

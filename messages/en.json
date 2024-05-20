@@ -30,6 +30,39 @@
       "description": "I pursue mastery, dedicating myself to continuous improvement, innovation, and excellence in my craft. It&apos;s about pushing boundaries, honing skills, and striving for the highest level of proficiency and expertise."
     }
   },
+  "services": {
+    "title": "My Services",
+    "description": "I offer expert frontend, backend, and DevOps services to meet your unique project needs. Explore below to see how I can help you achieve your goals.",
+    "features": "Features",
+    "keyTechnologies": "Key Technologies",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Crafting visually stunning and highly interactive user interfaces using modern web technologies. Specializing in responsive design, ensuring optimal performance across all devices.",
+      "features": {
+        "1": "Responsive Design",
+        "2": "Cross-Browser Compatibility",
+        "3": "Performance Optimization"
+      }
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Building robust and scalable server-side applications. Expertise in database design, API development, and server management to ensure seamless and secure data flow.",
+      "features": {
+        "1": "Scalable APIs",
+        "2": "Database Management",
+        "3": "Security Implementation"
+      }
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Implementing efficient and automated deployment pipelines to streamline development processes. Ensuring high availability, scalability, and security of your applications.",
+      "features": {
+        "1": "CI/CD Pipelines",
+        "2": "Infrastructure as Code",
+        "3": "Monitoring and Logging"
+      }
+    }
+  },
   "navbar": {
     "aboutMe": {
       "title": "About Me",
@@ -41,6 +74,10 @@
       "aboutMe": {
         "title": "About Me",
         "description": "A concise summary of who am I, my background, skills, and interests."
+      },
+      "myServices": {
+        "title": "My Services",
+        "description": "A list of services I offer, including frontend, backend, and DevOps services."
       },
       "contactMe": {
         "title": "Contact Me",
