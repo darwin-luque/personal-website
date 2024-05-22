@@ -45,17 +45,17 @@ const portfolioItems = (
   },
   {
     title: t("portfolio.testimonials.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#testimonials",
     description: t("portfolio.testimonials.description"),
   },
   {
     title: t("portfolio.education.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#education",
     description: t("portfolio.education.description"),
   },
   {
     title: t("portfolio.skills.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#skills",
     description: t("portfolio.skills.description"),
   },
 ];
