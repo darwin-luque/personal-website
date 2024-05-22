@@ -2,7 +2,7 @@ import { Hero } from "@/components/homepage/hero";
 import { Separator } from "@/components/ui/separator";
 import { AboutMe } from "@/components/homepage/about-me";
 import { ContactMe } from "@/components/homepage/contact-me";
-import { Services } from "../../components/homepage/services/services";
+import { Expertise } from "../../components/homepage/expertise";
 
 export default async function Home() {
   return (
@@ -23,10 +23,10 @@ export default async function Home() {
         </section>
         <Separator />
         <section
-          id="services"
+          id="expertise"
           className="mx-auto flex flex-col items-center gap-2 py-6 md:py-10 md:pb-6 lg:py-16 lg:pb-14"
         >
-          <Services />
+          <Expertise />
         </section>
         <Separator />
         <section

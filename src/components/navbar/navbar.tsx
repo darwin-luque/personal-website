@@ -1,13 +1,16 @@
 "use client";
 
 import { type FC } from "react";
-import { Cpu, Menu } from "lucide-react";
+import { Cpu, FileText, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Link } from "@/lib/intl";
+import { cn } from "@/lib/utils";
 import { ListItem } from "./list-item";
+import { ListItemContent } from "./list-item/content";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -27,8 +30,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ListItemContent } from "./list-item/content";
-import { ScrollArea } from "../ui/scroll-area";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const portfolioItems = (
   t: ReturnType<typeof useTranslations<string>>,
@@ -45,17 +47,17 @@ const portfolioItems = (
   },
   {
     title: t("portfolio.testimonials.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#testimonials",
     description: t("portfolio.testimonials.description"),
   },
   {
     title: t("portfolio.education.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#education",
     description: t("portfolio.education.description"),
   },
   {
     title: t("portfolio.skills.title"),
-    href: "/portfolio#projects",
+    href: "/portfolio#skills",
     description: t("portfolio.skills.description"),
   },
 ];
@@ -81,10 +83,10 @@ export const Navbar: FC<NavbarProps> = ({ lang }) => {
           href="/"
           className="col-span-3 flex items-center space-x-4 pl-4 md:col-span-4"
         >
-          <Cpu className="h-6 w-6" />
-          <p className="text-lg font-medium">Darwin Luque</p>
+          <Cpu className="h-4 w-4 sm:h-6 sm:w-6" />
+          <p className="text-base font-medium sm:text-lg">Darwin Luque</p>
         </Link>
-        <div className="col-span-6 hidden md:block">
+        <div className="col-span-5 hidden md:block">
           <NavigationMenu>
             <NavigationMenuList className="w-full">
               <NavigationMenuItem>
@@ -122,10 +124,10 @@ export const Navbar: FC<NavbarProps> = ({ lang }) => {
                       {t("aboutMe.aboutMe.description")}
                     </ListItem>
                     <ListItem
-                      href="/#services"
-                      title={t("aboutMe.myServices.title")}
+                      href="/#expertise"
+                      title={t("aboutMe.myExpertise.title")}
                     >
-                      {t("aboutMe.myServices.description")}
+                      {t("aboutMe.myExpertise.description")}
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
@@ -158,9 +160,27 @@ export const Navbar: FC<NavbarProps> = ({ lang }) => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="col-span-2 ml-auto flex items-center space-x-4 pr-4">
-          <ModeToggle />
-          <LanguageSwitcher lang={lang} />
+        <div className="col-span-2 ml-auto flex w-full items-center justify-end space-x-4 pr-4 lg:col-span-3">
+          <Tooltip delayDuration={200}>
+            <TooltipTrigger>
+              <a
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "hidden h-10 w-10 space-x-2 p-0 sm:flex lg:h-10 lg:w-fit lg:px-4 lg:py-2",
+                )}
+                href="https://utfs.io/f/cf333d0b-71b9-46f1-b1f5-0b5ca20eb1a5-td3bos.pdf"
+                download
+              >
+                <FileText className="h-[1.2rem] w-[1.2rem]" />
+                <span className="hidden lg:inline">{t("resume.title")}</span>
+              </a>
+              <TooltipContent>
+                <p>{t("resume.title")}</p>
+              </TooltipContent>
+            </TooltipTrigger>
+            <ModeToggle />
+            <LanguageSwitcher lang={lang} />
+          </Tooltip>
         </div>
       </div>
       <SheetContent className="w-screen" side="left">
@@ -222,7 +242,18 @@ export const Navbar: FC<NavbarProps> = ({ lang }) => {
                 </div>
               </div>
             </div>
-            <SheetFooter />
+            <SheetFooter>
+              <p className="text-muted-foreground">
+                Download my resume{" "}
+                <a
+                  className="font-bold"
+                  href="https://utfs.io/f/cf333d0b-71b9-46f1-b1f5-0b5ca20eb1a5-td3bos.pdf"
+                  download
+                >
+                  here
+                </a>
+              </p>
+            </SheetFooter>
           </div>
         </ScrollArea>
       </SheetContent>

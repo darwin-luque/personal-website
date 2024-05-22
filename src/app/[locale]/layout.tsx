@@ -1,11 +1,12 @@
 import { Inter } from "next/font/google";
+import { getMessages } from "next-intl/server";
 import type { PropsWithChildren } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/providers/theme";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { getMessages } from "next-intl/server";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({
@@ -34,12 +35,14 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
-              <Navbar lang={locale} />
-              {children}
-              <Footer />
-            </div>
-            <Toaster />
+            <TooltipProvider>
+              <div className="relative flex min-h-screen max-w-[100vw] flex-col bg-background">
+                <Navbar lang={locale} />
+                {children}
+                <Footer />
+              </div>
+              <Toaster />
+            </TooltipProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
