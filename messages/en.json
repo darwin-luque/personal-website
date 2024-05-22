@@ -116,6 +116,9 @@
       "dark": "Dark",
       "system": "System"
     },
+    "resume": {
+      "title": "Download my resume"
+    },
     "language": {
       "title": "Toggle Language",
       "english": "English",

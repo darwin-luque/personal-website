@@ -110,6 +110,9 @@
     "contact": {
       "title": "Contacto"
     },
+    "resume": {
+      "title": "Descarga mi CV"
+    },
     "theme": {
       "title": "Alternar tema",
       "light": "Claro",
