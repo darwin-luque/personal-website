@@ -10,16 +10,16 @@ import { Separator } from "@/components/ui/separator";
 import { type ISkill, skills } from "../../portfolio/skills/data";
 import { useTranslations } from "next-intl";
 
-interface ServicesProps {
+interface ExpertiseProps {
   title: string;
   description: string;
   keyTechnologies: ISkill[];
   features: string[];
 }
 
-const servicesList = (
+const expertiseList = (
   t: ReturnType<typeof useTranslations<string>>,
-): ServicesProps[] => [
+): ExpertiseProps[] => [
   {
     title: t("frontend.title"),
     description: t("frontend.description"),
@@ -52,8 +52,8 @@ const servicesList = (
   },
 ];
 
-export const Services: FC = () => {
-  const t = useTranslations("services");
+export const Expertise: FC = () => {
+  const t = useTranslations("expertise");
 
   return (
     <div className="py-12 md:container lg:py-16">
@@ -64,21 +64,21 @@ export const Services: FC = () => {
         {t("description")}
       </h3>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {servicesList(t).map((services: ServicesProps) => (
-          <Card key={services.title}>
+        {expertiseList(t).map((expertise: ExpertiseProps) => (
+          <Card key={expertise.title}>
             <CardHeader>
               <CardTitle className="item-center flex justify-between">
-                {services.title}
+                {expertise.title}
               </CardTitle>
             </CardHeader>
             <CardContent className="mt-4 grid grid-cols-1 grid-rows-3">
               <CardDescription className="text-base">
-                {services.description}
+                {expertise.description}
               </CardDescription>
               <span>
                 <h4 className="font-bold">{t("keyTechnologies")}</h4>
                 <ul className="grid list-disc grid-cols-2 grid-rows-6 pl-6">
-                  {services.keyTechnologies.map((technology) => (
+                  {expertise.keyTechnologies.map((technology) => (
                     <li key={technology.id}>{technology.name}</li>
                   ))}
                 </ul>
@@ -87,7 +87,7 @@ export const Services: FC = () => {
                 <Separator className="mb-4" />
                 <h4 className="font-bold">{t("features")}</h4>
                 <ul className="list-disc pl-6">
-                  {services.features.map((feature) => (
+                  {expertise.features.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>

@@ -30,7 +30,7 @@
       "description": "Busco la maestría, dedicándome a la mejora continua, la innovación y la excelencia en mi oficio. Se trata de empujar los límites, perfeccionar habilidades y esforzarse por el más alto nivel de competencia y experiencia."
     }
   },
-  "services": {
+  "expertise": {
     "title": "Mis servicios",
     "description": "Ofrezco servicios expertos de frontend, backend y DevOps para satisfacer las necesidades únicas de tu proyecto. Explora a continuación para ver cómo puedo ayudarte a alcanzar tus objetivos.",
     "features": "Características",
@@ -75,7 +75,7 @@
         "title": "Sobre mí",
         "description": "Un resumen conciso de quién soy, mi formación, habilidades e intereses."
       },
-      "myServices": {
+      "myExpertise": {
         "title": "Mis Servicios",
         "description": "Una lista de servicios que ofrezco, incluidos servicios de frontend, backend y DevOps."
       },

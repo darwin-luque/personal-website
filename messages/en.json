@@ -30,9 +30,9 @@
       "description": "I pursue mastery, dedicating myself to continuous improvement, innovation, and excellence in my craft. It&apos;s about pushing boundaries, honing skills, and striving for the highest level of proficiency and expertise."
     }
   },
-  "services": {
-    "title": "My Services",
-    "description": "I offer expert frontend, backend, and DevOps services to meet your unique project needs. Explore below to see how I can help you achieve your goals.",
+  "expertise": {
+    "title": "My Expertise",
+    "description": "I offer expert frontend, backend, and DevOps expertise to meet your unique project needs. Explore below to see how I can help you achieve your goals.",
     "features": "Features",
     "keyTechnologies": "Key Technologies",
     "frontend": {
@@ -75,9 +75,9 @@
         "title": "About Me",
         "description": "A concise summary of who am I, my background, skills, and interests."
       },
-      "myServices": {
-        "title": "My Services",
-        "description": "A list of services I offer, including frontend, backend, and DevOps services."
+      "myExpertise": {
+        "title": "My Expertise",
+        "description": "A list of expertise I offer, including frontend, backend, and DevOps expertise."
       },
       "contactMe": {
         "title": "Contact Me",
