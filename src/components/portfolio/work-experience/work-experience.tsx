@@ -95,6 +95,10 @@ export const WorkExperience: FC = () => {
         const company = companies.find((c) => c.id === parsedJob.companyId);
         if (!company) return null;
 
+        const sortedPositons = parsedJob.positions.sort((a, b) =>
+          a.startDate > b.startDate ? -1 : 1,
+        );
+
         return (
           <Card key={parsedJob.companyId} className="w-full">
             <CardHeader className="flex-row">
@@ -113,7 +117,7 @@ export const WorkExperience: FC = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-6">
-                {parsedJob.positions.map((position, i, arr) => (
+                {sortedPositons.map((position, i, arr) => (
                   <Fragment key={position.id}>
                     <div className="flex w-full gap-2">
                       <div>
