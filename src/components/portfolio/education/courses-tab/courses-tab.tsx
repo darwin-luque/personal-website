@@ -1,13 +1,7 @@
 import type { FC } from "react";
 import { useTranslations } from "next-intl";
-import { type Course, courses } from "./data";
-import {
-  Card,
-  CardTitle,
-  CardHeader,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
+import { type Course as ICourse, courses } from "./data";
+import { Course } from "./course";
 import {
   Accordion,
   AccordionItem,
@@ -28,53 +22,22 @@ export const CoursesTab: FC = () => {
         }
         return [main, [...other, course]];
       },
-      [[], []] as [Course[], Course[]],
+      [[], []] as [ICourse[], ICourse[]],
     );
 
   return (
     <>
       <div className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2 lg:grid-cols-3">
         {mainCourses.map((course) => (
-          <Card key={course.id}>
-            <CardHeader>
-              <CardTitle>{course.title}</CardTitle>
-              <CardDescription>{course.platform}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <a
-                href={course.certificationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {t("viewCertification")}
-              </a>
-            </CardContent>
-          </Card>
+          <Course key={course.id} course={course} />
         ))}
       </div>
-
       <Accordion collapsible type="single" className="w-full">
         <AccordionItem value="more-courses" className="w-full">
-          <AccordionTrigger>{t("more")}</AccordionTrigger>
+          <AccordionTrigger className="px-4">{t("more")}</AccordionTrigger>
           <AccordionContent className="grid grid-cols-1 gap-x-4 gap-y-2 md:grid-cols-2 lg:grid-cols-3">
             {otherCourses.map((course) => (
-              <Card key={course.id}>
-                <CardHeader>
-                  <CardTitle>{course.title}</CardTitle>
-                  <CardDescription>{course.platform}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <a
-                    href={course.certificationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    {t("viewCertification")}
-                  </a>
-                </CardContent>
-              </Card>
+              <Course key={course.id} course={course} />
             ))}
           </AccordionContent>
         </AccordionItem>
