@@ -179,6 +179,10 @@
         "anotherBlogApp": {
           "title": "Another Blog App",
           "description": "A simple blog app built with Next.js and Tailwind CSS."
+        },
+        "afm": {
+          "title": "Advance File Manager",
+          "description": "A file manager with workspaces builts with Next.js, tRPC, and Tailwind CSS."
         }
       }
     },

@@ -18,6 +18,15 @@ import {
 
 const getProjects = (t: ReturnType<typeof useTranslations<string>>) => [
   {
+    id: "advanced-file-management",
+    title: t("projects.afm.title"),
+    description: t("projects.afm.description"),
+    previewImage:
+      "https://utfs.io/f/8ca86db4-1276-45c0-ab01-9f3ff5c6e354-4mivvn.png",
+    alt: "Preview Screenshot of advanced-file-management.darwinluque.me",
+    url: "https://advanced-file-management.darwinluque.me/",
+  },
+  {
     id: "another-blog-app",
     title: t("projects.anotherBlogApp.title"),
     description: t("projects.anotherBlogApp.description"),
@@ -46,6 +55,8 @@ export const ProjectsCarousel: FC = () => {
                   <a
                     href={project.url}
                     className="w-full outline-none [text-decoration:none]"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Image
                       src={project.previewImage}
