@@ -55,6 +55,8 @@ export const ProjectsCarousel: FC = () => {
                   <a
                     href={project.url}
                     className="w-full outline-none [text-decoration:none]"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Image
                       src={project.previewImage}
