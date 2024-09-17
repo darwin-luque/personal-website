@@ -1,28 +1,79 @@
-# Create T3 App
+# Personal Website - Darwin Luque
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This repository contains the code for my personal website, which serves as a professional portfolio to showcase my skills and projects. The website is built using **Next.js**, **tRPC**, and **TailwindCSS**, and is powered by **Bun** for fast and efficient server-side rendering and performance.
 
-## What's next? How do I make an app with this?
+## 🚀 Technologies Used
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Next.js** – React framework for server-side rendering and static site generation
+- **tRPC** – Type-safe API communication between the client and server
+- **TailwindCSS** – Utility-first CSS framework for styling and responsiveness
+- **React Hook Form** – Managing form state and validation
+- **React Query** – Data fetching and caching for efficient state management
+- **shadcn/ui** – A set of accessible UI components built with TailwindCSS
+- **Lucide Icons** – Open-source icons for modern design elements
+- **Bun** – High-performance JavaScript runtime for fast server-side rendering
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## 🌟 Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
+- **Portfolio Showcase**: Highlights my skills, professional experience, and key projects.
+- **Responsive Design**: Optimized for seamless viewing on mobile, tablet, and desktop devices.
+- **Dark Mode**: Users can switch between light and dark themes.
+- **Fast and Lightweight**: Powered by **Bun** for optimal performance and minimal dependencies.
 
-## Learn More
+## 💡 Key Functionalities
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Portfolio
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+The website features a dedicated portfolio section that showcases my technical skills, career highlights, and key projects, providing potential employers and collaborators with an overview of my professional work.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Dark Mode
 
-## How do I deploy this?
+Users can toggle between light and dark themes, ensuring a comfortable viewing experience regardless of their environment.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Responsive Design
+
+The layout is optimized for different screen sizes, ensuring that the website provides a smooth user experience across devices, whether it's a phone, tablet, or desktop.
+
+## 🛠️ Getting Started
+
+To run this project locally using **Bun**, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/darwin-luque/personal-website
+   cd personal-website
+   ```
+
+2. Install the dependencies using **Bun**:
+
+   ```bash
+   bun install
+   ```
+
+3. Create a `.env` file in the root directory using the provided `.env.example` file as a template.
+
+4. Run the development server:
+
+   ```bash
+   bun run dev
+   ```
+
+5. Open your browser and visit `http://localhost:3000` to view the site locally.
+
+## 📅 Future Enhancements
+
+- **SEO Optimization**: Implement meta tags and structured data for better search engine visibility.
+- **Blog**: Add a blog section to share articles, tutorials, and insights.
+- **Performance Improvements**: Continuously optimize load times and resource usage.
+
+## 💻 Live Website
+
+Check out the live version of my website: [darwinluque.me](https://www.darwinluque.me)
+
+## 📫 Contact
+
+Feel free to connect with me for collaboration or inquiries:
+
+- **LinkedIn**: [Darwin Luque](https://www.linkedin.com/in/darwin-luque/)
+- **GitHub**: [darwin-luque](https://github.com/darwin-luque)
