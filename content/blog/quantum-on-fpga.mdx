@@ -1,0 +1,21 @@
+---
+title: "Quantum algorithms on a $10 chip"
+description: "My thesis emulated the Deutsch–Jozsa algorithm on an FPGA. Yes, a quantum algorithm. No, not on a quantum computer — that's the fun part."
+date: "2026-08-15"
+tags: ["quantum", "fpga", "hardware"]
+---
+
+> This is a placeholder post. Drop your real `.md` / `.mdx` files into `content/blog/` and they'll show up here automatically.
+
+## The idea
+
+Quantum computers are rare and expensive. FPGAs are neither. The Deutsch–Jozsa algorithm is small enough that you can emulate its unitary math on reconfigurable logic and watch it give the right answer every time.
+
+## What I built
+
+- An FPGA implementation of the oracle-based structure of Deutsch–Jozsa
+- Test benches to verify the "always one query" property held under emulation
+
+## Why it mattered
+
+It taught me that "impossible" is usually just "unfamiliar math plus unfamiliar tooling." That lesson transferred straight into production engineering.

@@ -1,0 +1,22 @@
+---
+title: "Monoliths, microservices, and the 40% less downtime"
+description: "How we migrated a legacy platform serving Wendy's, Takeda and Stellantis without taking it down. The story, the mistakes, and what I'd do differently."
+date: "2026-09-01"
+tags: ["architecture", "microservices", "nestjs"]
+---
+
+> This is a placeholder post. Drop your real `.md` / `.mdx` files into `content/blog/` and they'll show up here automatically.
+
+## Why we started
+
+The monolith was old enough to have opinions. Deployments took long, one bad merge took everyone down, and downtime was measured in interesting units.
+
+## What we did
+
+- Strangled features out one by one, behind feature flags
+- GitHub Actions + Docker pipelines, small and boring on purpose
+- REST where it's simple, GraphQL where clients kept asking for "just one more field"
+
+## What I'd do differently
+
+More telemetry earlier. You can't see what you broke if you never watched it work.
