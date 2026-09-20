@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         <div
-          className="prose-invert [--tw-prose-body:theme(colors.zinc.300)] space-y-0
+          className="prose-invert [--tw-prose-body:var(--color-zinc-300)] space-y-0
             [&_a]:text-primary [&_a]:underline [&_blockquote]:border-l-2 [&_blockquote]:border-primary/50 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-muted-foreground
             [&_code]:rounded [&_code]:bg-muted [&_code]:px-1 [&_code]:py-0.5 [&_code]:font-mono [&_code]:text-sm
             [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-2xl [&_h2]:font-bold
