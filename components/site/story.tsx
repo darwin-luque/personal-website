@@ -4,6 +4,8 @@ import AnimatedContent from "@/components/AnimatedContent"
 import RollingNumber from "@/components/RollingNumber"
 import { Card } from "@/components/ui/card"
 import { CircuitBoard } from "../resources/circuit-board"
+import { LeadershipJourney } from "../resources/leadership-journey"
+import { ExpandingMap } from "../resources/expanding-map"
 import { cn } from "cn"
 
 function StatCounter({
@@ -94,7 +96,7 @@ const chapters = [
         color: "#a78bfa",
       },
     ],
-    showcase: <CircuitBoard />,
+    showcase: <LeadershipJourney />,
   },
   {
     id: "ch-3",
@@ -132,7 +134,7 @@ const chapters = [
         color: "#34d399",
       },
     ],
-    showcase: <CircuitBoard />,
+    showcase: <ExpandingMap />,
   },
 ]
 

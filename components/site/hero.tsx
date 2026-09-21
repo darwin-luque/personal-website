@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 
 export function Hero() {
   return (
-    <section className="relative mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-4 pt-28 pb-16 md:px-8">
+    <section className="relative mx-auto flex min-h-svh max-w-6xl flex-col justify-center overflow-x-clip px-4 pt-28 pb-16 md:px-8">
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/4 left-1/2 -z-10 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]"

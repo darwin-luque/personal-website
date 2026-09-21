@@ -52,17 +52,19 @@ export function Contact() {
             href="https://linkedin.com/in/darwin-luque"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn — darwin-luque"
             className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-foreground"
           >
-            <LinkedinIcon className="size-4 text-primary" /> linkedin.com/in/darwin-luque
+            <LinkedinIcon className="size-4 text-primary" />
           </a>
           <a
             href="https://github.com/darwin-luque"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub — darwin-luque"
             className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-foreground"
           >
-            <GithubIcon className="size-4 text-primary" /> github.com/darwin-luque
+            <GithubIcon className="size-4 text-primary" />
           </a>
         </div>
       </div>

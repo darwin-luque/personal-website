@@ -2,12 +2,10 @@
 
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
+  /** Scroll container that hosts `children`. Defaults to the viewport. */
   container?: Element | string | null;
   distance?: number;
   direction?: 'vertical' | 'horizontal';
@@ -17,6 +15,7 @@ interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   initialOpacity?: number;
   animateOpacity?: boolean;
   scale?: number;
+  /** Fraction of the viewport (from the bottom) the element must cross before animating. 0.15 = start at "top 85%". */
   threshold?: number;
   delay?: number;
   disappearAfter?: number;
@@ -26,6 +25,11 @@ interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   onDisappearanceComplete?: () => void;
 }
 
+/**
+ * Scroll-reveal wrapper. Uses IntersectionObserver to detect when the element
+ * enters the viewport (the approach used by every other animation on the site,
+ * which behaves consistently on iPadOS/iOS Safari) and GSAP to run the tween.
+ */
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
   children,
   container,
@@ -53,15 +57,23 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     const el = ref.current;
     if (!el) return;
 
-    let scrollerTarget: Element | string | null = container || document.getElementById('snap-main-container') || null;
-
-    if (typeof scrollerTarget === 'string') {
-      scrollerTarget = document.querySelector(scrollerTarget);
-    }
-
     const axis = direction === 'horizontal' ? 'x' : 'y';
     const offset = reverse ? -distance : distance;
-    const startPct = (1 - threshold) * 100;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const showFinalState = () => {
+      gsap.set(el, { [axis]: 0, scale: 1, opacity: 1, visibility: 'visible' });
+    };
+
+    if (reduced || !('IntersectionObserver' in window)) {
+      showFinalState();
+      return;
+    }
+
+    let root: Element | null = null;
+    if (container) {
+      root = typeof container === 'string' ? document.querySelector(container) : container;
+    }
 
     gsap.set(el, {
       [axis]: offset,
@@ -74,7 +86,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       paused: true,
       delay,
       onComplete: () => {
-        if (onComplete) onComplete();
+        onComplete?.();
         if (disappearAfter > 0) {
           gsap.to(el, {
             [axis]: reverse ? distance : -distance,
@@ -97,16 +109,21 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       ease
     });
 
-    const st = ScrollTrigger.create({
-      trigger: el,
-      scroller: scrollerTarget || window,
-      start: `top ${startPct}%`,
-      once: true,
-      onEnter: () => tl.play()
-    });
+    // A negative bottom rootMargin shrinks the viewport by `threshold` from the
+    // bottom, so the observer fires exactly when the element's top crosses the
+    // (1 - threshold) line — the same point ScrollTrigger's "top 85%" used.
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        io.disconnect();
+        tl.play();
+      },
+      { root, threshold: 0, rootMargin: `0px 0px -${threshold * 100}% 0px` }
+    );
+    io.observe(el);
 
     return () => {
-      st.kill();
+      io.disconnect();
       tl.kill();
     };
   }, [

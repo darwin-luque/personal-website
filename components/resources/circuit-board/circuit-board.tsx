@@ -36,7 +36,7 @@ export function CircuitBoard() {
       if (self?.matches.reducedMotion) return
 
       const pulses = element.querySelectorAll<SVGPathElement>(
-        `.${classes.current}`,
+        `.${classes.current}`
       )
       const animations = Array.from(pulses, (pulse, index) => {
         // Normalize the loop, but preserve the same pulse length and speed
@@ -74,7 +74,12 @@ export function CircuitBoard() {
     <div ref={root} className={classes.board} aria-hidden="true">
       <svg viewBox="0 0 432 432" fill="none" focusable="false">
         <defs>
-          <pattern id={gridId} width="16" height="16" patternUnits="userSpaceOnUse">
+          <pattern
+            id={gridId}
+            width="16"
+            height="16"
+            patternUnits="userSpaceOnUse"
+          >
             <circle cx="8" cy="8" r="0.7" className={classes.gridDot} />
           </pattern>
         </defs>
@@ -86,15 +91,16 @@ export function CircuitBoard() {
         />
 
         <g className={classes.annotations}>
-          <text x="24" y="24">FIG. 01 / SIGNAL STUDY</text>
-          <text x="408" y="24" textAnchor="end">REV. A</text>
-          <text x="24" y="416">MECHATRONICS / LOGIC CORE</text>
-          <text x="408" y="416" textAnchor="end">01—10</text>
+          <text x="24" y="24">
+            01 / Learning by building
+          </text>
         </g>
 
         {/* This layer is always fully drawn, including before hydration. */}
         <g className={classes.traces}>
-          {traces.map(({ d }) => <path key={d} d={d} />)}
+          {traces.map(({ d }) => (
+            <path key={d} d={d} />
+          ))}
           <path d="M208 164V124L184 100V84M256 164V132L288 100H344M160 252H112L88 276H48M184 276V324L160 348H72M232 276V324L248 340V380M280 252H288L312 276V332" />
         </g>
 
@@ -135,12 +141,33 @@ export function CircuitBoard() {
           ))}
         </g>
 
-        <rect x="160" y="164" width="120" height="112" rx="8" className={classes.chip} />
-        <rect x="168" y="172" width="104" height="96" rx="4" className={classes.chipInset} />
+        <rect
+          x="160"
+          y="164"
+          width="120"
+          height="112"
+          rx="8"
+          className={classes.chip}
+        />
+        <rect
+          x="168"
+          y="172"
+          width="104"
+          height="96"
+          rx="4"
+          className={classes.chipInset}
+        />
         <circle cx="178" cy="182" r="2" className={classes.orientationDot} />
-        <path className={classes.chipMark} d="m204 197-6 6 6 6m32-12 6 6-6 6m-12-15-8 18" />
-        <text x="220" y="235" textAnchor="middle" className={classes.chipTitle}>CORE</text>
-        <text x="220" y="253" textAnchor="middle" className={classes.chipLabel}>U1 · FPGA</text>
+        <path
+          className={classes.chipMark}
+          d="m204 197-6 6 6 6m32-12 6 6-6 6m-12-15-8 18"
+        />
+        <text x="220" y="235" textAnchor="middle" className={classes.chipTitle}>
+          CORE
+        </text>
+        <text x="220" y="253" textAnchor="middle" className={classes.chipLabel}>
+          U1 · FPGA
+        </text>
 
         {/* Silkscreen details and small, recognizable component symbols. */}
         <g className={classes.components}>
@@ -150,20 +177,43 @@ export function CircuitBoard() {
           <path d="M312 316v16m-10 0h20m-16 5h12m-8 5h4" />
           <rect x="354" y="198" width="12" height="24" rx="2" />
         </g>
-        <rect x="356" y="205" width="8" height="10" rx="2" className={classes.led} />
+        <rect
+          x="356"
+          y="205"
+          width="8"
+          height="10"
+          rx="2"
+          className={classes.led}
+        />
 
         <g className={classes.labels}>
-          <text x="42" y="103">IN</text>
-          <text x="242" y="77">3V3</text>
-          <text x="244" y="116">R1</text>
-          <text x="78" y="195">C1</text>
-          <text x="367" y="188">D1</text>
-          <text x="349" y="128">OUT</text>
-          <text x="76" y="393">GND</text>
+          <text x="42" y="103">
+            IN
+          </text>
+          <text x="242" y="77">
+            3V3
+          </text>
+          <text x="244" y="116">
+            R1
+          </text>
+          <text x="78" y="195">
+            C1
+          </text>
+          <text x="367" y="188">
+            D1
+          </text>
+          <text x="349" y="128">
+            OUT
+          </text>
+          <text x="76" y="393">
+            GND
+          </text>
         </g>
 
         <circle cx="304" cy="72" r="3" className={classes.led} />
-        <text x="315" y="75" className={classes.labels}>SYS / OK</text>
+        <text x="315" y="75" className={classes.labels}>
+          SYS / OK
+        </text>
       </svg>
     </div>
   )
