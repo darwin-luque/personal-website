@@ -1,0 +1,170 @@
+.journey {
+  --journey-accent: #a78bfa;
+  width: 100%;
+  max-width: 28rem;
+  margin-inline: auto;
+  color: var(--journey-accent);
+}
+
+.journey svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gridDot {
+  fill: var(--muted-foreground);
+  opacity: 0.1;
+}
+
+.frame {
+  stroke: currentColor;
+  opacity: 0.14;
+}
+
+.annotations,
+.boardLabel,
+.sceneLabel,
+.step {
+  font-family: var(--font-mono), monospace;
+}
+
+.annotations {
+  fill: var(--muted-foreground);
+  font-size: 9px;
+  letter-spacing: 0.2px;
+}
+
+.orbit {
+  stroke: currentColor;
+  stroke-dasharray: 2 7;
+  opacity: 0.1;
+}
+
+.registration {
+  stroke: currentColor;
+  opacity: 0.18;
+}
+
+.sceneLabel {
+  fill: currentColor;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+.connections {
+  stroke: color-mix(in oklch, var(--journey-accent) 42%, var(--background));
+  stroke-width: 1.5;
+}
+
+.pulses {
+  stroke: currentColor;
+  stroke-width: 1.75;
+}
+
+.person {
+  fill: var(--background);
+  stroke: var(--foreground);
+  stroke-width: 2;
+}
+
+.gesture {
+  fill: none;
+  stroke: var(--foreground);
+  stroke-width: 2.5;
+}
+
+.hair {
+  fill: color-mix(in oklch, var(--journey-accent) 28%, var(--background));
+  stroke: var(--foreground);
+  stroke-width: 1.5;
+}
+
+.face {
+  stroke: var(--foreground);
+  stroke-width: 1.5;
+}
+
+.surface {
+  fill: var(--card);
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.detail,
+.bookDetails {
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.bookDetails {
+  color: color-mix(in oklch, var(--journey-accent) 65%, var(--background));
+}
+
+.boardFrame {
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.boardInterior {
+  fill: var(--card);
+}
+
+.boardLabel {
+  fill: var(--muted-foreground);
+  font-size: 8px;
+  letter-spacing: 0.2px;
+}
+
+.diagram {
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.diagramNodes,
+.source {
+  fill: var(--card);
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.junction {
+  fill: currentColor;
+}
+
+.teammate {
+  fill: var(--background);
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.spark {
+  fill: none;
+  stroke: currentColor;
+  stroke-opacity: 0.5;
+}
+
+.teammateHair {
+  fill: none;
+  stroke: var(--muted-foreground);
+}
+
+.stepTrack {
+  stroke: currentColor;
+  opacity: 0.2;
+}
+
+.step {
+  fill: currentColor;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulses,
+  .spark {
+    display: none;
+  }
+}

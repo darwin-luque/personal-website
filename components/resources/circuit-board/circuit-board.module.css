@@ -1,0 +1,124 @@
+.board {
+  width: 100%;
+  max-width: 28rem;
+  margin-inline: auto;
+  color: var(--primary);
+}
+
+.board svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gridDot {
+  fill: var(--muted-foreground);
+  opacity: 0.1;
+}
+
+.frame {
+  stroke: var(--primary);
+  stroke-width: 1;
+  opacity: 0.14;
+}
+
+.annotations,
+.labels,
+.chipLabel {
+  fill: var(--muted-foreground);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.7px;
+}
+
+.annotations {
+  font-size: 9px;
+  letter-spacing: 0.2px;
+}
+
+.traces {
+  stroke: color-mix(in oklch, var(--primary) 36%, var(--background));
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.currents {
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.8;
+}
+
+.current {
+  stroke: var(--primary);
+}
+
+.pads {
+  fill: var(--background);
+  stroke: color-mix(in oklch, var(--primary) 65%, var(--background));
+  stroke-width: 1.5;
+}
+
+.padCenter {
+  fill: var(--primary);
+  stroke: none;
+}
+
+.pins {
+  stroke: color-mix(in oklch, var(--primary) 65%, var(--background));
+  stroke-width: 4;
+}
+
+.chip {
+  fill: var(--card);
+  stroke: var(--primary);
+  stroke-width: 1.25;
+}
+
+.chipInset {
+  fill: color-mix(in oklch, var(--primary) 4%, var(--background));
+  stroke: color-mix(in oklch, var(--primary) 20%, var(--background));
+}
+
+.orientationDot {
+  fill: var(--muted-foreground);
+}
+
+.chipMark {
+  stroke: var(--primary);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chipTitle {
+  fill: var(--foreground);
+  font-family: var(--font-heading), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+.chipLabel {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.components {
+  fill: var(--background);
+  stroke: var(--muted-foreground);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.led {
+  fill: var(--chart-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .currents {
+    display: none;
+  }
+}
